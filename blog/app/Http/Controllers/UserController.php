@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\MongoWrapper;
 use \MongoDB\Client as Client;
 //use MongoDB\MongoWrapper as MongoWrapper;
 use App\Http\Requests;
@@ -13,128 +14,76 @@ class UserController extends Controller
     //users
     public function usersGet()
     {
-        $client = new Client();
-        $db = $client->selectDatabase('TourApp');
-        $userCollection = $db->selectCollection('User');
-        $allUsers = iterator_to_array($userCollection->find());
+        $allUsers = MongoWrapper::usersGet();
         return $allUsers;
     }
 
     public function userGet($username)
     {
-        $client = new Client();
-        $db = $client->selectDatabase('TourApp');
-        $userCollection = $db->selectCollection('User');
-        $user = $userCollection->findOne(array('_id' =>$username ));
+        $user =  MongoWrapper::userGet($username);
         return $user;
     }
 
 
     public function userGetFriends($username)
     {
-        $client = new Client();
-        $db = $client->selectDatabase('TourApp');
-        $users = $db->selectCollection('User');
-        $userFriends = $users->findOne(array('_id' =>$username ))->friends;
-        return $userFriends;
+        return MongoWrapper::userGet($username)->friends;
     }
 
     public function userAdd()
     {
-        $client = new Client();
-        $db = $client->selectDatabase('TourApp');
-        $users = $db->selectCollection('User');
         $newUser = request()->all();
-        $users->insertOne($newUser);
-        return array(true);
+        return MongoWrapper::userAdd($newUser);
     }
 
     public function userAddCity($username)
     {
-        $client = new Client();
-        $db = $client->selectDatabase('TourApp');
-        $users = $db->selectCollection('User');
         $body = request()->all();
         $lat = $body['lat']; $long = $body['long'];
-        $cityID=$lat . "_" . $long;
-        $city = $db->selectCollection('City')->findOne(array('_id' =>$cityID ));
-        $users->updateOne(array('_id' => $username),array('$push' => array('cities' => $city)));
-        return array(true);
+        return MongoWrapper::userAddCity($username,$lat,$long);
     }
 
     public function userAddUpvote($username)
     {
-        $client = new Client();
-        $db = $client->selectDatabase('TourApp');
-        $users = $db->selectCollection('User');
-        $users->updateOne(array('_id' => $username),array('$inc' => array('upvotes' => 1)));
-        return array(true);
+        return MongoWrapper::userAddUpDownvote($username,true);
     }
 
     public function userAddDownvote($username)
     {
-        $client = new Client();
-        $db = $client->selectDatabase('TourApp');
-        $users = $db->selectCollection('User');
-        $users->updateOne(array('_id' => $username),array('$inc' => array('downvotes' => 1)));
-        return array(true);
+       return MongoWrapper::userAddUpDownvote($username,false);
     }
 
     public function userUpdate($username)
     {
-        $client = new Client();
-        $userData = request()->all();
-        $db = $client->selectDatabase('TourApp');
-        $users = $db->selectCollection('User');
-        $users->updateOne(array('_id'=>$username),array('$set'=>$userData));
-        return array(true);
+        $body = request()->all();
+        return MongoWrapper::userUpdate($username,$body);
     }
 
     public function userDelete($username)
     {
-        $client = new Client();
-        $userData = request()->all();
-        $db = $client->selectDatabase('TourApp');
-        $users = $db->selectCollection('User');
-        $users->deleteOne(array('_id'=>$username));
-        return array(true);
+        return MongoWrapper::userDelete($username);
     }
 
 
     public function userComments($username)
     {
-        $client = new Client();
-        $db = $client->selectDatabase('TourApp');
-        $userCollection = $db->selectCollection('User');
-        $userComments = $userCollection->findOne(array('_id' =>$username ))->comments;
-        return $userComments;
+        return MongoWrapper::userComments($username);
     }
 
     public function userAddFriend()
     {
-        $client = new Client();
-        $db = $client->selectDatabase('TourApp');
-        $users = $db->selectCollection('User');
         $body=request()->all();
-        $userFromID=$body['userFromID'];
-        $userToID=$body['userToID'];
-        $userFrom = $users->findOne(array('_id' =>$userFromID ));
-        $userTo = $users->findOne(array('_id' =>$userToID ));
-        //do ovde je dobro
-        $users->updateOne(array('_id' => $userFrom), array('$push' => array('friends' => array('_id' => $userToID))));
-        $users->updateOne(array('_id' => $userTo), array('$push' => array('friends' => array('_id' => $userFromID))));
-        return array(true);
+        $f1=$body['f1'];
+        $f2=$body['f2'];
+        return MongoWrapper::userAddFriend($f1,$f2);
+
     }
 
     //cities
 
     public function citiesGet()
     {
-        $client = new Client();
-        $db = $client->selectDatabase('TourApp');
-        $cityCollection = $db->selectCollection('City');
-        $allCities = iterator_to_array($cityCollection->find());
-        return $allCities;
+        return MongoWrapper::citiesGet();
     }
 
 
@@ -142,27 +91,11 @@ class UserController extends Controller
 
     public function commentAdd()
     {
-        $client = new Client();
-        $db = $client->selectDatabase('TourApp');
-        $users = $db->selectCollection('User');
-        $comments = $db->selectCollection('Comment');
-        $body = request()->all();
-        $comment=array(
-            '_id' => time() . '_' . $body['from'],
-            'content' => $body['content'],
-            'toUser' => $body['to']
-        );
-        $comments->insertOne($comment);
-        $users->updateOne(array('_id' => $body['from']), array('$push' => array('comments' => $comment)));
-        return array(true);
+        return MongoWrapper::commentAdd(request()->all());
     }
     public function commentsGet()
     {
-        $client = new Client();
-        $db = $client->selectDatabase('TourApp');
-        $commentCollection = $db->selectCollection('Comment');
-        $allCities = iterator_to_array($commentCollection->find());
-        return $allCities;
+        return MongoWrapper::commentsGet();
     }
 
     public function testData()
@@ -170,7 +103,6 @@ class UserController extends Controller
         $faker = Faker\Factory::create();
         $client = new Client();
         $db=$client->selectDatabase('TourApp');
-
 
         //users
         $users = $db->selectCollection('User');
@@ -252,7 +184,7 @@ class UserController extends Controller
                 'toUser' => $usernameTo
             );
             $comments->insertOne($comment);
-            $users->updateOne(array('_id' => $username), array('$push' => array('comments' => $comment)));
+            $users->updateOne(array('_id' => $fromUser), array('$push' => array('comments' => $comment)));
             $komentari[] = $comment;
         }
         return array(true);
