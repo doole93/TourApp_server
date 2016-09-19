@@ -3,15 +3,15 @@
 namespace App\Http\Controllers;
 
 use \MongoDB\Client as Client;
+//use MongoDB\MongoWrapper as MongoWrapper;
 use App\Http\Requests;
 use Faker;
-use MongoDB\Model\BSONDocument;
 
 
 class UserController extends Controller
 {
-    //
-    public function allUsers()
+    //users
+    public function usersGet()
     {
         $client = new Client();
         $db = $client->selectDatabase('TourApp');
@@ -20,9 +20,8 @@ class UserController extends Controller
         return $allUsers;
     }
 
-    public function user($username)
+    public function userGet($username)
     {
-
         $client = new Client();
         $db = $client->selectDatabase('TourApp');
         $userCollection = $db->selectCollection('User');
@@ -30,7 +29,106 @@ class UserController extends Controller
         return $user;
     }
 
-    public function allCities()
+
+    public function userGetFriends($username)
+    {
+        $client = new Client();
+        $db = $client->selectDatabase('TourApp');
+        $users = $db->selectCollection('User');
+        $userFriends = $users->findOne(array('_id' =>$username ))->friends;
+        return $userFriends;
+    }
+
+    public function userAdd()
+    {
+        $client = new Client();
+        $db = $client->selectDatabase('TourApp');
+        $users = $db->selectCollection('User');
+        $newUser = request()->all();
+        $users->insertOne($newUser);
+        return array(true);
+    }
+
+    public function userAddCity($username)
+    {
+        $client = new Client();
+        $db = $client->selectDatabase('TourApp');
+        $users = $db->selectCollection('User');
+        $body = request()->all();
+        $lat = $body['lat']; $long = $body['long'];
+        $cityID=$lat . "_" . $long;
+        $city = $db->selectCollection('City')->findOne(array('_id' =>$cityID ));
+        $users->updateOne(array('_id' => $username),array('$push' => array('cities' => $city)));
+        return array(true);
+    }
+
+    public function userAddUpvote($username)
+    {
+        $client = new Client();
+        $db = $client->selectDatabase('TourApp');
+        $users = $db->selectCollection('User');
+        $users->updateOne(array('_id' => $username),array('$inc' => array('upvotes' => 1)));
+        return array(true);
+    }
+
+    public function userAddDownvote($username)
+    {
+        $client = new Client();
+        $db = $client->selectDatabase('TourApp');
+        $users = $db->selectCollection('User');
+        $users->updateOne(array('_id' => $username),array('$inc' => array('downvotes' => 1)));
+        return array(true);
+    }
+
+    public function userUpdate($username)
+    {
+        $client = new Client();
+        $userData = request()->all();
+        $db = $client->selectDatabase('TourApp');
+        $users = $db->selectCollection('User');
+        $users->updateOne(array('_id'=>$username),array('$set'=>$userData));
+        return array(true);
+    }
+
+    public function userDelete($username)
+    {
+        $client = new Client();
+        $userData = request()->all();
+        $db = $client->selectDatabase('TourApp');
+        $users = $db->selectCollection('User');
+        $users->deleteOne(array('_id'=>$username));
+        return array(true);
+    }
+
+
+    public function userComments($username)
+    {
+        $client = new Client();
+        $db = $client->selectDatabase('TourApp');
+        $userCollection = $db->selectCollection('User');
+        $userComments = $userCollection->findOne(array('_id' =>$username ))->comments;
+        return $userComments;
+    }
+
+    public function userAddFriend()
+    {
+        $client = new Client();
+        $db = $client->selectDatabase('TourApp');
+        $users = $db->selectCollection('User');
+        $body=request()->all();
+        $userFromID=$body['userFromID'];
+        $userToID=$body['userToID'];
+        $userFrom = $users->findOne(array('_id' =>$userFromID ));
+        $userTo = $users->findOne(array('_id' =>$userToID ));
+        //do ovde je dobro
+        $users->updateOne(array('_id' => $userFrom), array('$push' => array('friends' => array('_id' => $userToID))));
+        $users->updateOne(array('_id' => $userTo), array('$push' => array('friends' => array('_id' => $userFromID))));
+        return array(true);
+    }
+
+    //cities
+
+    public function citiesGet()
     {
         $client = new Client();
         $db = $client->selectDatabase('TourApp');
@@ -39,7 +137,26 @@ class UserController extends Controller
         return $allCities;
     }
 
-    public function allComments()
+
+    //comments
+
+    public function commentAdd()
+    {
+        $client = new Client();
+        $db = $client->selectDatabase('TourApp');
+        $users = $db->selectCollection('User');
+        $comments = $db->selectCollection('Comment');
+        $body = request()->all();
+        $comment=array(
+            '_id' => time() . '_' . $body['from'],
+            'content' => $body['content'],
+            'toUser' => $body['to']
+        );
+        $comments->insertOne($comment);
+        $users->updateOne(array('_id' => $body['from']), array('$push' => array('comments' => $comment)));
+        return array(true);
+    }
+    public function commentsGet()
     {
         $client = new Client();
         $db = $client->selectDatabase('TourApp');
@@ -68,7 +185,12 @@ class UserController extends Controller
                 "name" => $faker->firstName,
                 "surname" => $faker->lastName,
                 "description" => $faker->text(30),
-                "image" => ''
+                "image" => '',
+                'comments' => array(),
+                'friends' => array(),
+                'upvotes' => 0,
+                'downvotes' => 0,
+                'percentage' => 0
             );
             $users->insertOne($user);
             $addedUsers[]=$username;
@@ -121,18 +243,19 @@ class UserController extends Controller
         $komentari=array();
         for ($i = 1;$i<=30;$i++)
         {
-            $username=$addedUsers[array_rand($addedUsers)];
-            $fromUser =  $users->findOne(array('_id' => $username))->_id;
+            $usernameFrom=$addedUsers[array_rand($addedUsers)];
+            $usernameTo=$addedUsers[array_rand($addedUsers)];
+            $fromUser =  $users->findOne(array('_id' => $usernameFrom))->_id;
             $comment= array(
-                '_id' => $faker->dateTimeThisYear,
+                '_id' => $faker->dateTimeThisYear->getTimestamp()."_$fromUser",
                 'content' => $faker->text($faker->numberBetween(20,50)),
-                'user' => $fromUser
+                'toUser' => $usernameTo
             );
             $comments->insertOne($comment);
-            $users->updateOne(array('_id' => $username), array('$push' => array('comment' => $comment)));
+            $users->updateOne(array('_id' => $username), array('$push' => array('comments' => $comment)));
             $komentari[] = $comment;
         }
-        return $komentari;
+        return array(true);
     }
 
 
