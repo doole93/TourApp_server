@@ -14,6 +14,7 @@ class UserController extends Controller
     //users
     public function usersGet()
     {
+        response('Content-Type:application/json');
         $allUsers = MongoWrapper::usersGet();
         return $allUsers;
     }
@@ -120,6 +121,7 @@ class UserController extends Controller
                 "image" => '',
                 'comments' => array(),
                 'friends' => array(),
+                'cities' => array(),
                 'upvotes' => 0,
                 'downvotes' => 0,
                 'percentage' => 0

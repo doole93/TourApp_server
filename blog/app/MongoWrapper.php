@@ -31,14 +31,16 @@ class MongoWrapper
     {
         $db=self::getInstance();
         $users=$db->selectCollection('User');
-        return $users->findOne(array('_id' => $username));
+        $result= self::Bison2JSON($users->findOne(array('_id' => $username)));
+        return response($result)->header('Content-Type','application/json');
     }
 
     public static function usersGet()
     {
         $db=self::getInstance();
         $users = $db->selectCollection('User');
-        return iterator_to_array($users->find());
+        $result =  self::Bison2JSON((iterator_to_array($users->find())));
+        return response($result)->header('Content-Type','application/json');
     }
 
     public static function userAdd($newUser)
@@ -86,7 +88,10 @@ class MongoWrapper
 
     public static function userComments($username)
     {
-        return self::userGet($username)->comments;
+        $db=self::getInstance();
+        $users=$db->selectCollection('User');
+        $result= self::Bison2JSON($users->findOne(array('_id' => $username))->comments);
+        return response($result)->header('Content-Type','application/json');
     }
 
     public static function userAddFriend($f1,$f2)
@@ -128,7 +133,15 @@ class MongoWrapper
     public static function commentsGet()
     {
         $db=self::getInstance();
-        $comments=$db->selectCollection('Comment');
-        return iterator_to_array($comments->find());
+        $users = $db->selectCollection('Comment');
+        $result =  self::Bison2JSON((iterator_to_array($users->find())));
+        return response($result)->header('Content-Type','application/json');
+    }
+
+
+    //helper
+    private static function Bison2JSON($data)
+    {
+        return \MongoDB\BSON\toJSON(\MongoDB\BSON\fromPHP($data));
     }
 }

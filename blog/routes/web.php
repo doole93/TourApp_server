@@ -20,9 +20,9 @@ Route::get('/', function () {
 //users
 Route::get('/users','UserController@usersGet');
 // TODO: vracanje prijatelja
-Route::get('/users/{username}','UserController@userGetFriends');
-Route::post('/users','UserController@userAdd');
 Route::get('/users/{username}','UserController@userGet');
+Route::get('/users/{username}/friends','UserController@userGetFriends');
+Route::post('/users','UserController@userAdd');
 Route::put('/users/{username}','UserController@userUpdate');
 Route::delete('/users/{username}','UserController@userDelete');
 Route::put('/users/{username}/addCity','UserController@userAddCity');
@@ -41,6 +41,6 @@ Route::post('/comments/add','UserController@commentAdd');
 Route::get('/cities','UserController@citiesGet');
 
 //test data
-Route::get('/testData','UserController@testData');
+//Route::get('/testData','UserController@testData');
 
 
