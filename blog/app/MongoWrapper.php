@@ -7,8 +7,11 @@
  */
 
 namespace App;
-use \MongoDB\Client as Client;
 
+use \MongoDB\Client as Client;
+use \MongoDB\Driver\Exception\Exception as MongoEx;
+
+//TODO sredi error handling kod komunikacije sa bazom
 
 class MongoWrapper
 {
@@ -29,10 +32,18 @@ class MongoWrapper
 
     public static function userGet($username)
     {
-        $db=self::getInstance();
-        $users=$db->selectCollection('User');
-        $result= self::Bison2JSON($users->findOne(array('_id' => $username)));
-        return response($result)->header('Content-Type','application/json');
+//        try
+//        {
+            $db=self::getInstance();
+            $users=$db->selectCollection('User');
+            $result= self::Bison2JSON($users->findOne(array('_id' => $username)));
+            return response($result)->header('Content-Type','application/json');
+//        }
+//        catch (MongoEx $exception)
+//        {
+//            $response=json_encode(array('success' => false, 'message' => $exception->getMessage(), 'code' => $exception->getCode()));
+//            return response($response)->header('Content-Type','application/json');
+//        }
     }
 
     public static function usersGet()
