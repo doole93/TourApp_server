@@ -25,6 +25,19 @@ class UserController extends Controller
         return $user;
     }
 
+    public function userGetOnlineUsers()
+    {
+        return MongoWrapper::userGetOnlineUsers();
+    }
+
+    public function userUpdateStatus()
+    {
+        $body = request()->all();
+        $username = $body['_id'];
+        $status = $body['status'];
+        return MongoWrapper::userUpdateStatus($username,$status);
+    }
+
 
     public function userGetFriends($username)
     {

@@ -16,6 +16,7 @@ use \MongoDB\Driver\Exception\Exception as MongoEx;
 class MongoWrapper
 {
     private static $db;
+    private static $onlineUsers;
 
     private function __construct() { }
 
@@ -24,6 +25,7 @@ class MongoWrapper
         if(self::$db==null)
         {
             $client = new Client();
+            self::$onlineUsers = array();
             self::$db = $client->selectDatabase('TourApp');
         }
             return self::$db;
@@ -53,6 +55,46 @@ class MongoWrapper
         $result =  self::Bison2JSON((iterator_to_array($users->find())));
         return response($result)->header('Content-Type','application/json');
     }
+
+    public static function userUpdateStatus($body,$online)
+    {
+        $id = $body['_id'];
+        $db = self::getInstance();
+        $users = $db->selectCollection('User');
+        $user= self::Bison2JSON($users->findOne(array('_id' => $id)));
+
+        $status = $body['status'];
+        $lat = $body['lat'];
+        $long = $body['long'];
+
+        if(self::$onlineUsers[$id])
+        {
+            $onlineUsers[$id]['online'] = $online;
+            $onlineUsers[$id]['status'] = $status;
+            if($user['latitude'])
+                $onlineUsers[$id]['latitude'] = $lat;
+            if( $user['longitude'])
+                $onlineUsers[$id]['longitude'] = $long;
+        }
+        else //nema ga u trenutnom nizu
+        {
+            $onlineUsers[] = array( '_id' => $id, 'latitude' => $lat, 'longitude' => $long, 'status' => $status );
+        }
+        return response(true)->header('Content-Type', 'application/json');
+    }
+
+    //return online users
+    public static function userGetOnlineUsers()
+    {
+        $online=array();
+        foreach (self::$onlineUsers as $user)
+        {
+            if($user['online'])
+                $online[] = $user;
+        }
+        return $online;
+    }
+
 
     public static function userAdd($newUser)
     {
@@ -109,10 +151,8 @@ class MongoWrapper
     {
         $db=self::getInstance();
         $users = $db->selectCollection('User');
-        $friendOne = $users->findOne(array('_id' =>$f1 ));
-        $friendTwo = $users->findOne(array('_id' =>$f2 ));
-        $users->updateOne(array('_id' => $friendOne), array('$push' => array('friends' => array('_id' => $friendTwo))));
-        $users->updateOne(array('_id' => $friendTwo), array('$push' => array('friends' => array('_id' => $friendOne))));
+        $users->updateOne(array('_id' => $f2), array('$push' => array('friends' => array('_id' => $f1))));
+        $users->updateOne(array('_id' => $f1), array('$push' => array('friends' => array('_id' => $f2))));
         return array(true);
     }
 
