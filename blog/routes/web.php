@@ -41,6 +41,6 @@ Route::post('/comments/add','UserController@commentAdd');
 Route::get('/cities','UserController@citiesGet');
 
 //test data
-//Route::get('/testData','UserController@testData');
+Route::get('/testData','UserController@testData');
 
 
