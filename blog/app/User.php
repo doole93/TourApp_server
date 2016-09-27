@@ -5,25 +5,69 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+class User
 {
-    use Notifiable;
+    private $username;
+    private $lat;
+    private $long;
 
     /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
+     * User constructor.
      */
-    protected $fillable = [
-        'name', 'email', 'password',
-    ];
+    public function __construct() {}
 
     /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
+     * @return mixed
      */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
+    public function getUsername()
+    {
+        return $this->username;
+    }
+
+    /**
+     * @param mixed $username
+     * @return User
+     */
+    public function setUsername($username)
+    {
+        $this->username = $username;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLat()
+    {
+        return $this->lat;
+    }
+
+    /**
+     * @param mixed $lat
+     * @return User
+     */
+    public function setLat($lat)
+    {
+        $this->lat = $lat;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLong()
+    {
+        return $this->long;
+    }
+
+    /**
+     * @param mixed $long
+     * @return User
+     */
+    public function setLong($long)
+    {
+        $this->long = $long;
+        return $this;
+    }
+
 }

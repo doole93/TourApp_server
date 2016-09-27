@@ -31,6 +31,8 @@ Route::put('/users','UserController@userAddFriend');
 Route::put('/users/{username}/upvote','UserController@userAddUpvote');
 Route::put('/users/{username}/downvote','UserController@userAddDownvote');
 
+// TODO: mozda treba i da se izbaci vracanje komentara korisnika (posto se ucitavanjem usera ucitavaju i svi njegovi komentari
+
 //comments
 Route::get('/comments','UserController@commentsGet');
 Route::get('/comments/{username}','UserController@userComments');
@@ -41,5 +43,11 @@ Route::get('/cities','UserController@citiesGet');
 
 //test data
 Route::get('/testData','UserController@testData');
+
+//clean data
+Route::get('/cleanData','UserController@cleanData');
+
+//online users
+Route::get('/usersOnline','UserController@userGetOnlineUsers');
 
 
