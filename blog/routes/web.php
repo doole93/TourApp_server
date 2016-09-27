@@ -19,7 +19,6 @@ Route::get('/', function () {
 
 //users
 //Route::get('/users/{username}/friends','UserController@userGetFriends');
-// TODO: vracanje prijatelja (mozda i nije potrebno, posto se ucitavanjem usera ucitavaju i svi njegovi prijatelji)
 
 Route::get('/users','UserController@usersGet');
 Route::get('/users/{username}','UserController@userGet');
@@ -32,7 +31,6 @@ Route::put('/users','UserController@userAddFriend');
 Route::put('/users/{username}/upvote','UserController@userAddUpvote');
 Route::put('/users/{username}/downvote','UserController@userAddDownvote');
 
-// TODO: mozda treba i da se izbaci vracanje komentara korisnika (posto se ucitavanjem usera ucitavaju i svi njegovi komentari
 
 //comments
 //Route::get('/comments/{username}','UserController@userComments');

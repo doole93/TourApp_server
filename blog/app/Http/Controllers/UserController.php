@@ -3,10 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\MongoWrapper;
-use \MongoDB\Client as Client;
-//use MongoDB\MongoWrapper as MongoWrapper;
 use App\Http\Requests;
-use Faker;
 
 
 class UserController extends Controller
@@ -72,7 +69,7 @@ class UserController extends Controller
     public function userOnlineUpdate()
     {
         $body = request()->all();
-        return MongoWrapper::userOnlineUpdate($body);
+        return MongoWrapper::userUpdateOnline($body);
     }
 
     public function userDelete($username)

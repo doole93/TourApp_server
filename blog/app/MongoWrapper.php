@@ -16,7 +16,6 @@ class MongoWrapper
     //TODO sredi error handling kod komunikacije sa bazom
 
     private static $db;
-    private static $onlineUsers = array();
     private static $usersCollection = "Users";
     private static $usersOnlineCollection = "UsersOnline";
     private static $commentsCollection = "Comments";
@@ -44,13 +43,6 @@ class MongoWrapper
         return response($result)->header('Content-Type','application/json');
     }
 
-//    public static function userGetFriends($username)
-//    {
-//        $db=self::getInstance();
-//        $users=$db->selectCollection(self::$usersCollection);
-//        $result= self::bson2JSON($users->findOne(array('_id' => $username))['friends']);
-//        return response($result)->header('Content-Type','application/json');
-//    }
 
     public static function usersGet()
     {
@@ -58,32 +50,6 @@ class MongoWrapper
         $users = $db->selectCollection(self::$usersCollection);
         $result = self::bsonIterator2Array($users->find());
         return response($result)->header('Content-Type','application/json');
-    }
-
-    public static function userUpdateStatus($body)
-    {
-        $id = $body['_id'];
-        $db = self::getInstance();
-        $user = $db->selectCollection(self::$usersCollection)->findOne(array('_id' => $id));
-
-        $lat = $body['lat'];
-        $long = $body['long'];
-        $online = $body['online'];
-
-        if(self::$onlineUsers[$id])
-        {
-            $onlineUsers[$id]['online'] = $online;
-            $onlineUsers[$id]['online'] = $online;
-            if($user['latitude'])
-                $onlineUsers[$id]['latitude'] = $lat;
-            if( $user['longitude'])
-                $onlineUsers[$id]['longitude'] = $long;
-        }
-        else //nema ga u trenutnom nizu
-        {
-            $onlineUsers[] = array( '_id' => $id, 'latitude' => $lat, 'longitude' => $long, 'online' => $online );
-        }
-        return response(true)->header('Content-Type', 'application/json');
     }
 
     //return online users
@@ -131,7 +97,7 @@ class MongoWrapper
         return response('true')->header('Content-Type', 'application/json');
     }
 
-    public static function userOnlineUpdate($body)
+    public static function userUpdateOnline($body)
     {
         $db = self::getInstance();
         $user = $db->selectCollection(self::$usersOnlineCollection)->updateOne(array('_id' => $body['_id']),$body);
@@ -145,14 +111,6 @@ class MongoWrapper
         $users->deleteOne(array('_id'=>$username));
         return response(true)->header('Content-Type', 'application/json');
     }
-
-//    public static function userComments($username)
-//    {
-//        $db=self::getInstance();
-//        $users=$db->selectCollection(self::$usersCollection);
-//        $result= self::bson2JSON($users->findOne(array('_id' => $username))->comments);
-//        return response($result)->header('Content-Type','application/json');
-//    }
 
     public static function userAddFriend($f1,$f2)
     {
