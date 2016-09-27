@@ -1,6 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
 ### Laravel template
-vendor/
+#vendor/
 node_modules/
 
 # Laravel 4 specific
@@ -11,7 +11,7 @@ app/storage/
 bootstrap/cache/
 .env.*.php
 .env.php
-.env
+#.env
 
 # Rocketeer PHP task runner and deployment package. https://github.com/rocketeers/rocketeer
 .rocketeer/
