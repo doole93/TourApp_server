@@ -18,10 +18,11 @@ Route::get('/', function () {
 //REST API routes
 
 //users
-Route::get('/users','UserController@usersGet');
-// TODO: vracanje prijatelja (mozda i nije potrebno, posto se ucitavanjem usera ucitavaju i svi njegovi prijatelji)
-Route::get('/users/{username}','UserController@userGet');
 //Route::get('/users/{username}/friends','UserController@userGetFriends');
+// TODO: vracanje prijatelja (mozda i nije potrebno, posto se ucitavanjem usera ucitavaju i svi njegovi prijatelji)
+
+Route::get('/users','UserController@usersGet');
+Route::get('/users/{username}','UserController@userGet');
 Route::post('/users','UserController@userAdd');
 Route::put('/users/{username}','UserController@userUpdate');
 Route::delete('/users/{username}','UserController@userDelete');
@@ -34,8 +35,8 @@ Route::put('/users/{username}/downvote','UserController@userAddDownvote');
 // TODO: mozda treba i da se izbaci vracanje komentara korisnika (posto se ucitavanjem usera ucitavaju i svi njegovi komentari
 
 //comments
+//Route::get('/comments/{username}','UserController@userComments');
 Route::get('/comments','UserController@commentsGet');
-Route::get('/comments/{username}','UserController@userComments');
 Route::post('/comments/add','UserController@commentAdd');
 
 //cities

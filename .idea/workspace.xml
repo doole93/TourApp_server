@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f621654f-9681-4229-bbe3-d2c7b0ccb13a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/app/Http/Controllers/UserController.php" afterPath="$PROJECT_DIR$/blog/app/Http/Controllers/UserController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/app/MongoWrapper.php" afterPath="$PROJECT_DIR$/blog/app/MongoWrapper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/routes/web.php" afterPath="$PROJECT_DIR$/blog/routes/web.php" />
     </list>
     <ignored path="laravel_test.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,11 +28,11 @@
       <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blog/app/Http/Controllers/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+            <state relative-caret-position="303">
+              <caret line="93" column="37" selection-start-line="93" selection-start-column="37" selection-end-line="93" selection-end-column="37" />
               <folding>
                 <element signature="e#40#61#0#PHP" expanded="true" />
-                <marker date="1474997221800" expanded="true" signature="2447:2453" ph="{...}" />
+                <marker date="1475005669839" expanded="true" signature="2587:2593" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -39,28 +41,11 @@
       <file leaf-file-name="MongoWrapper.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blog/app/MongoWrapper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
-              <caret line="226" column="73" selection-start-line="226" selection-start-column="73" selection-end-line="226" selection-end-column="73" />
+            <state relative-caret-position="136">
+              <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
               <folding>
-                <element signature="e#11290#11410#0#PHP" expanded="false" />
-                <marker date="1475004695227" expanded="false" signature="8647:9825" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blog/app/User.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
-              <folding>
-                <element signature="e#315#388#0#PHP" expanded="false" />
-                <element signature="e#460#569#0#PHP" expanded="false" />
-                <element signature="e#612#675#0#PHP" expanded="false" />
-                <element signature="e#742#831#0#PHP" expanded="false" />
-                <element signature="e#874#939#0#PHP" expanded="false" />
-                <element signature="e#1007#1100#0#PHP" expanded="false" />
+                <element signature="e#11533#11652#0#PHP" expanded="false" />
+                <marker date="1475015861565" expanded="false" signature="8841:10019" ph="..." />
               </folding>
             </state>
           </provider>
@@ -145,7 +130,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="Laravel.SettingsForm" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="data&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/vendor/mongodb/mongodb/src/Database.php&#10;giti&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/.gitignore&#10;git&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/.gitignore&#10;kerne&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/app/Http/Kernel.php&#10;mongowra&#9;null&#9;null&#10;web&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/routes/web.php&#10;Faker&#9;null&#9;null&#10;usercon&#9;null&#9;null&#10;composer&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/composer.json&#10;app&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/routes/api.php&#10;databa&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/config/database.php&#10;servicepro&#9;null&#9;null&#10;routecolle&#9;null&#9;null&#10;database.php&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/config/database.php&#10;app.php&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/config/app.php" />
+    <property name="SearchEverywhereHistoryKey" value="web&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/routes/web.php&#10;data&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/vendor/mongodb/mongodb/src/Database.php&#10;giti&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/.gitignore&#10;git&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/.gitignore&#10;kerne&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/app/Http/Kernel.php&#10;mongowra&#9;null&#9;null&#10;Faker&#9;null&#9;null&#10;usercon&#9;null&#9;null&#10;composer&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/composer.json&#10;app&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/routes/api.php&#10;databa&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/config/database.php&#10;servicepro&#9;null&#9;null&#10;routecolle&#9;null&#9;null&#10;database.php&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/config/database.php&#10;app.php&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/config/app.php" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files (x86)\nodejs\node.exe" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="nodejs_interpreter_path" value="C:/Program Files (x86)/nodejs/node" />
@@ -235,12 +220,12 @@
       <workItem from="1474911053405" duration="4841000" />
       <workItem from="1474931538672" duration="5345000" />
       <workItem from="1474971610483" duration="570000" />
-      <workItem from="1474983400456" duration="12515000" />
+      <workItem from="1474983400456" duration="18078000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82601000" />
+    <option name="totallyTimeSpent" value="88164000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -261,7 +246,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32997763" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18176973" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18176973" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31543624" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -293,7 +278,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -595,14 +580,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/mongodb.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="830" column="27" selection-start-line="830" selection-start-column="27" selection-end-line="830" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/mongodb/mongodb/src/Collection.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -633,32 +610,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog/app/Http/Controllers/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-          <folding>
-            <element signature="e#40#61#0#PHP" expanded="true" />
-            <marker date="1474997221800" expanded="true" signature="2447:2453" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="e#7#386#0#PHP" expanded="true" />
-            <element signature="e#404#447#1#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blog/app/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+        <state relative-caret-position="476">
+          <caret line="36" column="7" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
           <folding>
             <element signature="e#315#388#0#PHP" expanded="false" />
             <element signature="e#460#569#0#PHP" expanded="false" />
@@ -670,13 +625,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/blog/app/Http/Controllers/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="93" column="37" selection-start-line="93" selection-start-column="37" selection-end-line="93" selection-end-column="37" />
+          <folding>
+            <element signature="e#40#61#0#PHP" expanded="true" />
+            <marker date="1475005669839" expanded="true" signature="2587:2593" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/mongodb.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="817" column="17" selection-start-line="817" selection-start-column="17" selection-end-line="817" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="36" column="10" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
+          <folding>
+            <element signature="e#7#386#0#PHP" expanded="true" />
+            <element signature="e#404#447#1#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/blog/app/MongoWrapper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="226" column="73" selection-start-line="226" selection-start-column="73" selection-end-line="226" selection-end-column="73" />
+        <state relative-caret-position="136">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
           <folding>
-            <element signature="e#11290#11410#0#PHP" expanded="false" />
-            <marker date="1475004695227" expanded="false" signature="8647:9825" ph="..." />
+            <element signature="e#11533#11652#0#PHP" expanded="false" />
+            <marker date="1475015861565" expanded="false" signature="8841:10019" ph="..." />
           </folding>
         </state>
       </provider>

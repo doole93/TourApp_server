@@ -69,6 +69,12 @@ class UserController extends Controller
         return MongoWrapper::userUpdate($username,$body);
     }
 
+    public function userOnlineUpdate()
+    {
+        $body = request()->all();
+        return MongoWrapper::userOnlineUpdate($body);
+    }
+
     public function userDelete($username)
     {
         return MongoWrapper::userDelete($username);
