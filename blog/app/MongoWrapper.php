@@ -34,18 +34,18 @@ class MongoWrapper
 
     public static function userGet($username)
     {
-//        try
-//        {
-            $db=self::getInstance();
-            $users=$db->selectCollection('User');
-            $result= self::Bison2JSON($users->findOne(array('_id' => $username)));
-            return response($result)->header('Content-Type','application/json');
-//        }
-//        catch (MongoEx $exception)
-//        {
-//            $response=json_encode(array('success' => false, 'message' => $exception->getMessage(), 'code' => $exception->getCode()));
-//            return response($response)->header('Content-Type','application/json');
-//        }
+        $db=self::getInstance();
+        $users=$db->selectCollection('User');
+        $result= self::Bison2JSON($users->findOne(array('_id' => $username)));
+        return response($result)->header('Content-Type','application/json');
+    }
+
+    public static function userGetFriends($username)
+    {
+        $db=self::getInstance();
+        $users=$db->selectCollection('User');
+        $result= self::Bison2JSON($users->findOne(array('_id' => $username))['friends']);
+        return response($result)->header('Content-Type','application/json');
     }
 
     public static function usersGet()
@@ -151,8 +151,10 @@ class MongoWrapper
     {
         $db=self::getInstance();
         $users = $db->selectCollection('User');
-        $users->updateOne(array('_id' => $f2), array('$push' => array('friends' => array('_id' => $f1))));
-        $users->updateOne(array('_id' => $f1), array('$push' => array('friends' => array('_id' => $f2))));
+        $u1=$users->findOne(array('_id' => $f1));
+        $u2=$users->findOne(array('_id' => $f2));
+        $users->updateOne(array('_id' => $f2), array('$push' => array('friends' => $u1)));
+        $users->updateOne(array('_id' => $f1), array('$push' => array('friends' => $u2)));
         return array(true);
     }
 

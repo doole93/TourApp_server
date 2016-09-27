@@ -41,7 +41,7 @@ class UserController extends Controller
 
     public function userGetFriends($username)
     {
-        return MongoWrapper::userGet($username)->friends;
+        return MongoWrapper::userGetFriends($username);
     }
 
     public function userAdd()

@@ -19,15 +19,14 @@ Route::get('/', function () {
 
 //users
 Route::get('/users','UserController@usersGet');
-// TODO: vracanje prijatelja
+// TODO: vracanje prijatelja (mozda i nije potrebno, posto se ucitavanjem usera ucitavaju i svi njegovi prijatelji)
 Route::get('/users/{username}','UserController@userGet');
-Route::get('/users/{username}/friends','UserController@userGetFriends');
+//Route::get('/users/{username}/friends','UserController@userGetFriends');
 Route::post('/users','UserController@userAdd');
 Route::put('/users/{username}','UserController@userUpdate');
 Route::delete('/users/{username}','UserController@userDelete');
 Route::put('/users/{username}/addCity','UserController@userAddCity');
 
-// TODO: dodaj uparivanje
 Route::put('/users','UserController@userAddFriend');
 Route::put('/users/{username}/upvote','UserController@userAddUpvote');
 Route::put('/users/{username}/downvote','UserController@userAddDownvote');
