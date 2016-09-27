@@ -18,7 +18,12 @@ class MongoWrapper
     //TODO sredi error handling kod komunikacije sa bazom
 
     private static $db;
-    private static $onlineUsers=array();
+    private static $onlineUsers = array();
+    private static $usersCollection = "Users";
+    private static $usersOnlineCollection = "UsersOnline";
+    private static $commentsCollection = "Comments";
+    private static $citiesCollection = "Cities";
+
 
     private function __construct() { }
 
@@ -36,58 +41,49 @@ class MongoWrapper
     public static function userGet($username)
     {
         $db=self::getInstance();
-        $users=$db->selectCollection('User');
-        $result= self::Bison2JSON($users->findOne(array('_id' => $username)));
+        $users=$db->selectCollection(self::$usersCollection);
+        $result= self::bison2JSON($users->findOne(array('_id' => $username)));
         return response($result)->header('Content-Type','application/json');
     }
 
     public static function userGetFriends($username)
     {
         $db=self::getInstance();
-        $users=$db->selectCollection('User');
-        $result= self::Bison2JSON($users->findOne(array('_id' => $username))['friends']);
+        $users=$db->selectCollection(self::$usersCollection);
+        $result= self::bison2JSON($users->findOne(array('_id' => $username))['friends']);
         return response($result)->header('Content-Type','application/json');
     }
 
     public static function usersGet()
     {
         $db=self::getInstance();
-        $users = $db->selectCollection('User');
-        $result =  self::Bison2JSON((iterator_to_array($users->find())));
+        $users = $db->selectCollection(self::$usersCollection);
+        $result =  self::bison2JSON((iterator_to_array($users->find())));
         return response($result)->header('Content-Type','application/json');
     }
 
     public static function userUpdateStatus($body)
     {
         $id = $body['_id'];
+        $db = self::getInstance();
+        $user = $db->selectCollection(self::$usersCollection)->findOne(array('_id' => $id));
+
         $lat = $body['lat'];
         $long = $body['long'];
         $online = $body['online'];
 
-        if(!$online)
-        {
-            unset(self::$onlineUsers[$id]);
-            return response(true)->header('Content-Type', 'application/json');
-        }
-
         if(self::$onlineUsers[$id])
         {
-            /*$onlineUsers[$id]['online'] = $online;
+            $onlineUsers[$id]['online'] = $online;
             $onlineUsers[$id]['online'] = $online;
             if($user['latitude'])
                 $onlineUsers[$id]['latitude'] = $lat;
             if( $user['longitude'])
-                $onlineUsers[$id]['longitude'] = $long;*/
-            self::$onlineUsers[$id]->setLat($lat)
-                                   ->setLong($long);
+                $onlineUsers[$id]['longitude'] = $long;
         }
         else //nema ga u trenutnom nizu
         {
-//            $onlineUsers[] = array( '_id' => $id, 'latitude' => $lat, 'longitude' => $long, 'online' => $online );
-            $userObject=new User();
-            self::$onlineUsers[$id]=$userObject->setUsername($id)
-                                               ->setLat($lat)
-                                               ->setLong($long);
+            $onlineUsers[] = array( '_id' => $id, 'latitude' => $lat, 'longitude' => $long, 'online' => $online );
         }
         return response(true)->header('Content-Type', 'application/json');
     }
@@ -95,15 +91,17 @@ class MongoWrapper
     //return online users
     public static function userGetOnlineUsers()
     {
-        dump(self::$onlineUsers);die();
-        return self::$onlineUsers;
+        $db=self::getInstance();
+        $users = $db->selectCollection(self::$usersOnlineCollection);
+        $result =  self::bison2JSON((iterator_to_array($users->find())));
+        return response($result)->header('Content-Type','application/json');
     }
 
 
     public static function userAdd($newUser)
     {
         $db=self::getInstance();
-        $users = $db->selectCollection('User');
+        $users = $db->selectCollection(self::$usersCollection);
         $users->insertOne($newUser);
         return response(true)->header('Content-Type', 'application/json');
     }
@@ -111,9 +109,9 @@ class MongoWrapper
     public static function userAddCity($username,$lat,$long)
     {
         $db=self::getInstance();
-        $users = $db->selectCollection('User');
+        $users = $db->selectCollection(self::$usersCollection);
         $cityID=$lat . "_" . $long;
-        $city = $db->selectCollection('City')->findOne(array('_id' =>$cityID ));
+        $city = $db->selectCollection(self::$citiesCollection)->findOne(array('_id' =>$cityID ));
         $users->updateOne(array('_id' => $username),array('$push' => array('cities' => $city)));
         return response(true)->header('Content-Type', 'application/json');
     }
@@ -121,7 +119,7 @@ class MongoWrapper
     public static function userAddUpDownvote($username,$upvote)
     {
         $db=self::getInstance();
-        $users = $db->selectCollection('User');
+        $users = $db->selectCollection(self::$usersCollection);
         $vote= $upvote ? 'upvotes' : 'downvotes';
         $users->updateOne(array('_id' => $username),array('$inc' => array("$vote" => 1)));
         return response(true)->header('Content-Type', 'application/json');
@@ -130,7 +128,7 @@ class MongoWrapper
     public static function userUpdate($username,$userData)
     {
         $db=self::getInstance();
-        $users = $db->selectCollection('User');
+        $users = $db->selectCollection(self::$usersCollection);
         $users->updateOne(array('_id'=>$username),array('$set'=>$userData));
         return response(true)->header('Content-Type', 'application/json');
     }
@@ -138,7 +136,7 @@ class MongoWrapper
     public static function userDelete($username)
     {
         $db=self::getInstance();
-        $users = $db->selectCollection('User');
+        $users = $db->selectCollection(self::$usersCollection);
         $users->deleteOne(array('_id'=>$username));
         return response(true)->header('Content-Type', 'application/json');
     }
@@ -146,15 +144,15 @@ class MongoWrapper
     public static function userComments($username)
     {
         $db=self::getInstance();
-        $users=$db->selectCollection('User');
-        $result= self::Bison2JSON($users->findOne(array('_id' => $username))->comments);
+        $users=$db->selectCollection(self::$usersCollection);
+        $result= self::bison2JSON($users->findOne(array('_id' => $username))->comments);
         return response($result)->header('Content-Type','application/json');
     }
 
     public static function userAddFriend($f1,$f2)
     {
         $db=self::getInstance();
-        $users = $db->selectCollection('User');
+        $users = $db->selectCollection(self::$usersCollection);
         $u1=$users->findOne(array('_id' => $f1));
         $u2=$users->findOne(array('_id' => $f2));
         $users->updateOne(array('_id' => $f2), array('$push' => array('friends' => $u1)));
@@ -167,7 +165,7 @@ class MongoWrapper
     public static function citiesGet()
     {
         $db=self::getInstance();
-        $cities = $db->selectCollection('City');
+        $cities = $db->selectCollection(self::$citiesCollection);
         return iterator_to_array($cities->find());
     }
 
@@ -175,8 +173,8 @@ class MongoWrapper
     public static function commentAdd($data)
     {
         $db=self::getInstance();
-        $users = $db->selectCollection('User');
-        $comments = $db->selectCollection('Comment');
+        $users = $db->selectCollection(self::$usersCollection);
+        $comments = $db->selectCollection(self::$commentsCollection);
         $comment=array(
             '_id' => time() . '_' . $data['from'],
             'content' => $data['content'],
@@ -190,8 +188,8 @@ class MongoWrapper
     public static function commentsGet()
     {
         $db=self::getInstance();
-        $users = $db->selectCollection('Comment');
-        $result =  self::Bison2JSON((iterator_to_array($users->find())));
+        $users = $db->selectCollection(self::$commentsCollection);
+        $result =  self::bison2JSON((iterator_to_array($users->find())));
         return response($result)->header('Content-Type','application/json');
     }
 
@@ -202,8 +200,8 @@ class MongoWrapper
         $db=$client->selectDatabase('TourApp');
 
         //users
-        $users = $db->selectCollection('User');
-        $onlineUsers=$db->selectCollection('OnlineUsers');
+        $users = $db->selectCollection(self::$usersCollection);
+        $onlineUsers=$db->selectCollection(self::$usersOnlineCollection);
         $addedUsers = array();
         for ($i = 1;$i <= 10;$i++)
         {
@@ -231,18 +229,20 @@ class MongoWrapper
 
             //for static array
             $online=$faker->boolean();
-            $userObject->setUsername($user['_id'])
-                       ->setLat('42')
-                       ->setLong('21');
-            if($online)
-                self::$onlineUsers[$userObject->getUsername()]=$userObject;
             $users->insertOne($user);
-            $onlineUsers->insertOne($userObject);
+            if($online)
+            {
+                $onlineUsers->insertOne(array(
+                    "_id" => $user['_id'],
+                    "_latitude" => 43.32,
+                    "longitude" => 21.89
+                ));
+            }
             $addedUsers[] = $username;
         }
 
         //cities
-        $cities=$db->selectCollection('City');
+        $cities=$db->selectCollection(self::$citiesCollection);
         $addedCities=array(
             array(
                 '_id' => '43.3194_21.8963',
@@ -284,7 +284,7 @@ class MongoWrapper
             $cities->insertOne($city);
 
         //comments
-        $comments=$db->selectCollection('Comment');
+        $comments=$db->selectCollection(self::$commentsCollection);
         $komentari=array();
         for ($i = 1;$i<=30;$i++)
         {
@@ -310,14 +310,15 @@ class MongoWrapper
     public static function cleanData()
     {
         $db = self::getInstance();
-        $db->selectCollection('User')->deleteMany(array());
-        $db->selectCollection('City')->deleteMany(array());
-        $db->selectCollection('Comment')->deleteMany(array());
+        $db->selectCollection(self::$usersCollection)->deleteMany(array());
+        $db->selectCollection(self::$usersOnlineCollection)->deleteMany(array());
+        $db->selectCollection(self::$citiesCollection)->deleteMany(array());
+        $db->selectCollection(self::$commentsCollection)->deleteMany(array());
         return response('true')->header('Content-Type', 'application/json');
     }
 
     //helper
-    private static function Bison2JSON($data)
+    private static function bison2JSON($data)
     {
         return \MongoDB\BSON\toJSON(\MongoDB\BSON\fromPHP($data));
     }
