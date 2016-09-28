@@ -21,21 +21,17 @@ Route::get('/', function () {
 //Route::get('/users/{username}/friends','UserController@userGetFriends');
 
 Route::get('/users','UserController@usersGet');
+Route::post('/users','UserController@usersAdd');
+Route::put('/users','UserController@userUpdate');
+Route::get('/users/online','UserController@userGetOnlineUsers');
 Route::get('/users/{username}','UserController@userGet');
-Route::post('/users','UserController@userAdd');
-Route::put('/users/{username}','UserController@userUpdate');
 Route::delete('/users/{username}','UserController@userDelete');
-Route::put('/users/{username}/addCity','UserController@userAddCity');
-
-Route::put('/users','UserController@userAddFriend');
-Route::put('/users/{username}/upvote','UserController@userAddUpvote');
-Route::put('/users/{username}/downvote','UserController@userAddDownvote');
 
 
 //comments
-//Route::get('/comments/{username}','UserController@userComments');
+Route::get('/comments/{username}','UserController@userComments');
 Route::get('/comments','UserController@commentsGet');
-Route::post('/comments/add','UserController@commentAdd');
+Route::post('/comments','UserController@commentAdd');
 
 //cities
 Route::get('/cities','UserController@citiesGet');
@@ -47,6 +43,5 @@ Route::get('/testData','UserController@testData');
 Route::get('/cleanData','UserController@cleanData');
 
 //online users
-Route::get('/usersOnline','UserController@userGetOnlineUsers');
 
 

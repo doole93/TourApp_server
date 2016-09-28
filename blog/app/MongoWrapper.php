@@ -62,7 +62,7 @@ class MongoWrapper
     }
 
 
-    public static function userAdd($newUser)
+    public static function usersAdd($newUser)
     {
         $db=self::getInstance();
         $users = $db->selectCollection(self::$usersCollection);
@@ -70,30 +70,32 @@ class MongoWrapper
         return response(true)->header('Content-Type', 'application/json');
     }
 
-    public static function userAddCity($username,$lat,$long)
-    {
-        $db=self::getInstance();
-        $users = $db->selectCollection(self::$usersCollection);
-        $cityID=$lat . "_" . $long;
-        $city = $db->selectCollection(self::$citiesCollection)->findOne(array('_id' =>$cityID ));
-        $users->updateOne(array('_id' => $username),array('$push' => array('cities' => $city)));
-        return response('true')->header('Content-Type', 'application/json');
-    }
+//    public static function userAddCity($username,$lat,$long)
+//    {
+//        $db=self::getInstance();
+//        $users = $db->selectCollection(self::$usersCollection);
+//        $cityID=$lat . "_" . $long;
+//        $city = $db->selectCollection(self::$citiesCollection)->findOne(array('_id' =>$cityID ));
+//        $users->updateOne(array('_id' => $username),array('$push' => array('cities' => $city)));
+//        return response('true')->header('Content-Type', 'application/json');
+//    }
 
-    public static function userAddUpDownvote($username,$upvote)
-    {
-        $db=self::getInstance();
-        $users = $db->selectCollection(self::$usersCollection);
-        $vote= $upvote ? 'upvotes' : 'downvotes';
-        $users->updateOne(array('_id' => $username),array('$inc' => array("$vote" => 1)));
-        return response('true')->header('Content-Type', 'application/json');
-    }
+//    public static function userAddUpDownvote($username,$upvote)
+//    {
+//        $db=self::getInstance();
+//        $users = $db->selectCollection(self::$usersCollection);
+//        $vote= $upvote ? 'upvotes' : 'downvotes';
+//        $users->updateOne(array('_id' => $username),array('$inc' => array("$vote" => 1)));
+//        return response('true')->header('Content-Type', 'application/json');
+//    }
 
-    public static function userUpdate($username,$userData)
+    public static function userUpdate($body)
     {
+        $username=$body['_id'];
         $db = self::getInstance();
         $users = $db->selectCollection(self::$usersCollection);
-        $users->updateOne(array('_id'=>$username),array('$set'=>$userData));
+        $body['percentage'] = number_format($body['percentage'],2);
+        $users->updateOne(array('_id'=>$username),array('$set'=>$body));
         return response('true')->header('Content-Type', 'application/json');
     }
 
@@ -121,6 +123,14 @@ class MongoWrapper
         $users->updateOne(array('_id' => $f1), array('$push' => array('friends' => $u2)));
         $users->updateOne(array('_id' => $f2), array('$push' => array('friends' => $u1)));
         return response('true')->header('Content-Type', 'application/json');
+    }
+
+    public static function userComments($username)
+    {
+        $db = self::getInstance();
+        $users = $db->selectCollection(self::$commentsCollection);
+        $result = self::bsonIterator2Array($users->find(array('toUser' => $username)));
+        return response($result)->header('Content-Type', 'application/json');
     }
 
 
