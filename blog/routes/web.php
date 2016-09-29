@@ -29,8 +29,8 @@ Route::delete('/users/{username}','UserController@userDelete');
 
 
 //comments
-Route::get('/comments/{username}','UserController@userComments');
 Route::get('/comments','UserController@commentsGet');
+Route::get('/comments/{username}','UserController@userComments');
 Route::post('/comments','UserController@commentAdd');
 
 //cities
