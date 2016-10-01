@@ -58,6 +58,11 @@ class UserController extends Controller
         return MongoWrapper::userUpdate(request()->all());
     }
 
+    public function userValidate()
+    {
+        return MongoWrapper::userValidate(request()->all());
+    }
+
     public function userOnlineUpdate()
     {
         $body = request()->all();

@@ -25,6 +25,7 @@ Route::post('/users','UserController@usersAdd');
 Route::put('/users','UserController@userUpdate');
 Route::get('/users/online','UserController@userGetOnlineUsers');
 Route::get('/users/{username}','UserController@userGet');
+Route::post('/users/{username}/validate','UserController@userValidate');
 Route::delete('/users/{username}','UserController@userDelete');
 
 

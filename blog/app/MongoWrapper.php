@@ -111,7 +111,18 @@ class MongoWrapper
         $db=self::getInstance();
         $users = $db->selectCollection(self::$usersCollection);
         $users->deleteOne(array('_id'=>$username));
-        return response(true)->header('Content-Type', 'application/json');
+        return response('true')->header('Content-Type', 'application/json');
+    }
+
+    public static function userValidate($body)
+    {
+        $db=self::getInstance();
+        $users = $db->selectCollection(self::$usersCollection);
+        $user = $users->findOne(array('_id' => $body['_id']));
+        if($user['password'] == $body['password'] )
+            return response('true')->header('Content-Type', 'application/json');
+        else
+            return response('false')->header('Content-Type', 'application/json');
     }
 
     public static function userAddFriend($f1,$f2)
