@@ -39,7 +39,10 @@ class MongoWrapper
     {
         $db=self::getInstance();
         $users=$db->selectCollection(self::$usersCollection);
-        $result= self::bson2JSON($users->findOne(array('_id' => $username)));
+        $user = $users->findOne(array('_id' => $username));
+        if($user == null)
+            return response(null)->header('Content-Typge','application/json');
+        $result= self::bson2JSON($user);
         return response($result)->header('Content-Type','application/json');
     }
 
@@ -119,10 +122,18 @@ class MongoWrapper
         $db=self::getInstance();
         $users = $db->selectCollection(self::$usersCollection);
         $user = $users->findOne(array('_id' => $body['_id']));
-        if($user['password'] == $body['password'] )
-            return response('true')->header('Content-Type', 'application/json');
-        else
-            return response('false')->header('Content-Type', 'application/json');
+        if($user)
+        {
+            $pass = password_hash($body['password'],PASSWORD_DEFAULT);
+            if($pass == $user['password'] )
+            {
+                $result = self::bson2JSON($user);
+                return response($result)->header('Content-Type', 'application/json');
+            }
+            else
+                return response(null)->header('Content-Type', 'application/json');
+        }
+        return response(null)->header('Content-Type', 'application/json');
     }
 
     public static function userAddFriend($f1,$f2)
