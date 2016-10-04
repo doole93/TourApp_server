@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f621654f-9681-4229-bbe3-d2c7b0ccb13a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/app/Http/Controllers/UserController.php" afterPath="$PROJECT_DIR$/blog/app/Http/Controllers/UserController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/app/MongoWrapper.php" afterPath="$PROJECT_DIR$/blog/app/MongoWrapper.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/routes/web.php" afterPath="$PROJECT_DIR$/blog/routes/web.php" />
     </list>
@@ -28,10 +29,10 @@
       <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blog/app/Http/Controllers/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="35" column="33" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
+            <state relative-caret-position="235">
+              <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
               <folding>
-                <marker date="1475337299210" expanded="true" signature="2341:2347" ph="{...}" />
+                <marker date="1475622404171" expanded="true" signature="2460:2466" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -40,12 +41,11 @@
       <file leaf-file-name="MongoWrapper.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blog/app/MongoWrapper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="107" column="42" selection-start-line="107" selection-start-column="42" selection-end-line="107" selection-end-column="42" />
+            <state relative-caret-position="337">
+              <caret line="61" column="87" selection-start-line="61" selection-start-column="87" selection-end-line="61" selection-end-column="87" />
               <folding>
                 <element signature="e#103#133#0#PHP" expanded="true" />
-                <element signature="e#8499#9684#0#PHP" expanded="false" />
-                <element signature="e#11197#11316#0#PHP" expanded="false" />
+                <element signature="e#8653#9838#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -54,8 +54,8 @@
       <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blog/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="27" column="61" selection-start-line="27" selection-start-column="61" selection-end-line="27" selection-end-column="61" />
+            <state relative-caret-position="362">
+              <caret line="27" column="10" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
               <folding>
                 <element signature="e#7#386#0#PHP" expanded="true" />
                 <element signature="e#404#447#1#PHP" expanded="false" />
@@ -131,18 +131,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laravel_test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane />
+      </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -150,7 +143,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="Laravel.SettingsForm" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="web&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/routes/web.php&#10;data&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/vendor/mongodb/mongodb/src/Database.php&#10;giti&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/.gitignore&#10;git&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/.gitignore&#10;kerne&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/app/Http/Kernel.php&#10;mongowra&#9;null&#9;null&#10;Faker&#9;null&#9;null&#10;usercon&#9;null&#9;null&#10;composer&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/composer.json&#10;app&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/routes/api.php&#10;databa&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/config/database.php&#10;servicepro&#9;null&#9;null&#10;routecolle&#9;null&#9;null&#10;database.php&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/config/database.php&#10;app.php&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/config/app.php" />
+    <property name="SearchEverywhereHistoryKey" value="web.php&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/routes/web.php&#10;web&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/routes/web.php&#10;data&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/vendor/mongodb/mongodb/src/Database.php&#10;giti&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/.gitignore&#10;git&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/.gitignore&#10;kerne&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/app/Http/Kernel.php&#10;mongowra&#9;null&#9;null&#10;Faker&#9;null&#9;null&#10;usercon&#9;null&#9;null&#10;composer&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/composer.json&#10;app&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/routes/api.php&#10;databa&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/config/database.php&#10;servicepro&#9;null&#9;null&#10;routecolle&#9;null&#9;null&#10;database.php&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/config/database.php&#10;app.php&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/config/app.php" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files (x86)\nodejs\node.exe" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="nodejs_interpreter_path" value="C:/Program Files (x86)/nodejs/node" />
@@ -249,12 +242,13 @@
       <workItem from="1475343951924" duration="1236000" />
       <workItem from="1475411351685" duration="4791000" />
       <workItem from="1475537492825" duration="36000" />
-      <workItem from="1475537539581" duration="93000" />
+      <workItem from="1475537539581" duration="171000" />
+      <workItem from="1475614454963" duration="6469000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105207000" />
+    <option name="totallyTimeSpent" value="111754000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -266,15 +260,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12633263" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15565032" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13982102" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32997763" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.195629" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.195629" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31543624" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -652,8 +646,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/blog/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="27" column="61" selection-start-line="27" selection-start-column="61" selection-end-line="27" selection-end-column="61" />
+        <state relative-caret-position="362">
+          <caret line="27" column="10" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
           <folding>
             <element signature="e#7#386#0#PHP" expanded="true" />
             <element signature="e#404#447#1#PHP" expanded="false" />
@@ -663,22 +657,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/blog/app/Http/Controllers/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="35" column="33" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
+        <state relative-caret-position="235">
+          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
           <folding>
-            <marker date="1475337299210" expanded="true" signature="2341:2347" ph="{...}" />
+            <marker date="1475622404171" expanded="true" signature="2460:2466" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/blog/app/MongoWrapper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="107" column="42" selection-start-line="107" selection-start-column="42" selection-end-line="107" selection-end-column="42" />
+        <state relative-caret-position="337">
+          <caret line="61" column="87" selection-start-line="61" selection-start-column="87" selection-end-line="61" selection-end-column="87" />
           <folding>
             <element signature="e#103#133#0#PHP" expanded="true" />
-            <element signature="e#8499#9684#0#PHP" expanded="false" />
-            <element signature="e#11197#11316#0#PHP" expanded="false" />
+            <element signature="e#8653#9838#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>

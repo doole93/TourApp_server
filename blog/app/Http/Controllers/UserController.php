@@ -15,6 +15,12 @@ class UserController extends Controller
         return $allUsers;
     }
 
+    public function usersNear($radius)
+    {
+        return MongoWrapper::usersNear(request()->all(),$radius);
+    }
+
+
     public function userGet($username)
     {
         return MongoWrapper::userGet($username);

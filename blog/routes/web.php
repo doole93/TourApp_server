@@ -25,6 +25,7 @@ Route::post('/users','UserController@usersAdd');
 Route::put('/users','UserController@userUpdate');
 Route::get('/users/online','UserController@userGetOnlineUsers');
 Route::get('/users/{username}','UserController@userGet');
+Route::post('/usersNear/{radius}','UserController@usersNear');
 Route::post('/users/validate','UserController@userValidate');
 Route::delete('/users/{username}','UserController@userDelete');
 

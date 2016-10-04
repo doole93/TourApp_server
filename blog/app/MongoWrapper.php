@@ -55,6 +55,29 @@ class MongoWrapper
         return response($result)->header('Content-Type','application/json');
     }
 
+    public static function usersNear($user,$radius)
+    {
+        $db=self::getInstance();
+        $onlineUsers = self::bsonIterator2Array( $db->selectCollection(self::$usersOnlineCollection));
+//        $usersFriends = json_decode(self::bson2JSON(($currentUser['friends'])),true);
+        $usersFriends = $user['friends'];
+        $usersFriends = array_map(
+                      function($friend) {return $friend['_id'];},
+                      $usersFriends);
+        $onlineUserIDs = array_map(
+            function($friend) {return $friend['_id'];},
+            $onlineUsers );
+        $friendsToCheck = array_intersect($usersFriends,$onlineUserIDs);
+        $near = array();
+        foreach ($friendsToCheck as $friendID) {
+            if (self::getDistance($user['latitude'],$user['longitude'],
+                $onlineUsers[$friendID]['latitude'],$onlineUsers[$friendID]['longitude'])<$radius) {
+                $near[]=$onlineUsers[$friendID];
+            }
+        }
+        return response($near)->header('Content-Type','application/json');
+    }
+
     //return online users
     public static function userGetOnlineUsers()
     {
@@ -72,25 +95,6 @@ class MongoWrapper
         $users->insertOne($newUser);
         return response(true)->header('Content-Type', 'application/json');
     }
-
-//    public static function userAddCity($username,$lat,$long)
-//    {
-//        $db=self::getInstance();
-//        $users = $db->selectCollection(self::$usersCollection);
-//        $cityID=$lat . "_" . $long;
-//        $city = $db->selectCollection(self::$citiesCollection)->findOne(array('_id' =>$cityID ));
-//        $users->updateOne(array('_id' => $username),array('$push' => array('cities' => $city)));
-//        return response('true')->header('Content-Type', 'application/json');
-//    }
-
-//    public static function userAddUpDownvote($username,$upvote)
-//    {
-//        $db=self::getInstance();
-//        $users = $db->selectCollection(self::$usersCollection);
-//        $vote= $upvote ? 'upvotes' : 'downvotes';
-//        $users->updateOne(array('_id' => $username),array('$inc' => array("$vote" => 1)));
-//        return response('true')->header('Content-Type', 'application/json');
-//    }
 
     public static function userUpdate($body)
     {
@@ -219,7 +223,7 @@ class MongoWrapper
                 'cities' => array(),
                 'upvotes' => $upvotes,
                 'downvotes' => $downvotes,
-                'percentage' => number_format($upvotes*100/($upvotes+$downvotes),2)
+                'percentage' => number_format($upvotes *100/($upvotes+$downvotes),2)
             );
 
             //for static array
@@ -229,7 +233,7 @@ class MongoWrapper
             {
                 $onlineUsers->insertOne(array(
                     "_id" => $user['_id'],
-                    "_latitude" => 43.32,
+                    "latitude" => 43.32,
                     "longitude" => 21.89
                 ));
             }
@@ -323,4 +327,18 @@ class MongoWrapper
         $result = self::bson2JSON(iterator_to_array($array));
         return json_decode($result, true);
     }
+
+    //Haversine formula for distance between two points
+    private static function getDistance($latitude1, $longitude1, $latitude2, $longitude2)
+    {
+        $earth_radius = 6371;
+        $dLat = deg2rad($latitude2 - $latitude1);
+        $dLon = deg2rad($longitude2 - $longitude1);
+        $a = sin($dLat/2) * sin($dLat/2) + cos(deg2rad($latitude1)) * cos(deg2rad($latitude2))
+            * sin($dLon/2) * sin($dLon/2);
+        $c = 2 * asin(sqrt($a));
+        $d = $earth_radius * $c;
+        return $d;
+    }
+
 }
