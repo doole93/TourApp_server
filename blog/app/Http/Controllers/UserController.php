@@ -38,8 +38,7 @@ class UserController extends Controller
 
     public function usersAdd()
     {
-        $newUser = request()->all();
-        return MongoWrapper::usersAdd($newUser);
+        return MongoWrapper::usersAdd(request()->all());
     }
 
     public function userAddCity($username)

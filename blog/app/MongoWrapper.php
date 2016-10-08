@@ -8,8 +8,10 @@
 
 namespace App;
 
+use Illuminate\Http\JsonResponse;
 use \MongoDB\Client as Client;
 use Faker;
+use Psy\Util\Json;
 
 class MongoWrapper
 {
@@ -41,9 +43,10 @@ class MongoWrapper
         $users=$db->selectCollection(self::$usersCollection);
         $user = $users->findOne(array('_id' => $username));
         if($user == null)
-            return response(null)->header('Content-Typge','application/json');
+            return response(json_encode(null))->header('Content-Typge','application/json');
         $result= self::bson2JSON($user);
-        return response($result)->header('Content-Type','application/json');
+//        return response($result)->header('Content-Type','application/json');
+        return new JsonResponse($result);
     }
 
 
@@ -52,9 +55,11 @@ class MongoWrapper
         $db=self::getInstance();
         $users = $db->selectCollection(self::$usersCollection);
         $result = self::bsonIterator2Array($users->find());
-        return response($result)->header('Content-Type','application/json');
+//        return response($result)->header('Content-Type','application/json');
+        return new JsonResponse($result);
     }
 
+    //TODO: testirati ovu fju dal radi
     public static function usersNear($user,$radius)
     {
         $db=self::getInstance();
@@ -75,7 +80,8 @@ class MongoWrapper
                 $near[]=$onlineUsers[$friendID];
             }
         }
-        return response($near)->header('Content-Type','application/json');
+//        return response($near)->header('Content-Type','application/json');
+        return new JsonResponse($near);
     }
 
     //return online users
@@ -84,7 +90,8 @@ class MongoWrapper
         $db=self::getInstance();
         $users = $db->selectCollection(self::$usersOnlineCollection);
         $result = self::bsonIterator2Array($users->find());
-        return response($result)->header('Content-Type','application/json');
+//        return response($result)->header('Content-Type','application/json');
+        return new JsonResponse($result);
     }
 
 
@@ -92,8 +99,13 @@ class MongoWrapper
     {
         $db=self::getInstance();
         $users = $db->selectCollection(self::$usersCollection);
+        $onlineUsers = $db->selectCollection(self::$usersOnlineCollection);
+        //TODO: na kraju sifra
+//        $newUser['password'] = password_hash($newUser['password'],PASSWORD_DEFAULT); //bcrypt
         $users->insertOne($newUser);
-        return response(true)->header('Content-Type', 'application/json');
+        $onlineUsers->insertOne($newUser);
+//        return response('true')->header('Content-Type', 'application/json');
+        return new JsonResponse('true');
     }
 
     public static function userUpdate($body)
@@ -103,14 +115,16 @@ class MongoWrapper
         $users = $db->selectCollection(self::$usersCollection);
         $body['percentage'] = number_format($body['percentage'],2);
         $users->updateOne(array('_id'=>$username),array('$set'=>$body));
-        return response('true')->header('Content-Type', 'application/json');
+//        return response('true')->header('Content-Type', 'application/json');
+        return new JsonResponse('true');
     }
 
     public static function userUpdateOnline($body)
     {
         $db = self::getInstance();
         $user = $db->selectCollection(self::$usersOnlineCollection)->updateOne(array('_id' => $body['_id']),$body);
-        return response('true')->header('Content-Type', 'application/json');
+//        return response('true')->header('Content-Type', 'application/json');
+        return new JsonResponse('true');
     }
 
     public static function userDelete($username)
@@ -118,7 +132,8 @@ class MongoWrapper
         $db=self::getInstance();
         $users = $db->selectCollection(self::$usersCollection);
         $users->deleteOne(array('_id'=>$username));
-        return response('true')->header('Content-Type', 'application/json');
+//        return response('true')->header('Content-Type', 'application/json');
+        return new JsonResponse('true');
     }
 
     public static function userValidate($body)
@@ -128,16 +143,21 @@ class MongoWrapper
         $user = $users->findOne(array('_id' => $body['_id']));
         if($user)
         {
-            $pass = password_hash($body['password'],PASSWORD_DEFAULT);
+            //TODO : vrati sifru
+//            $pass = password_hash($body['password'],PASSWORD_DEFAULT);
+            $pass = $body['password'];
             if($pass == $user['password'] )
             {
                 $result = self::bson2JSON($user);
-                return response($result)->header('Content-Type', 'application/json');
+//                return response($result)->header('Content-Type', 'application/json');
+                return new JsonResponse($result);
             }
             else
-                return response(null)->header('Content-Type', 'application/json');
+//                return response(json_encode(false))->header('Content-Type', 'application/json');
+                return new JsonResponse(json_encode(false));
         }
-        return response(null)->header('Content-Type', 'application/json');
+//        return response(json_encode(false))->header('Content-Type', 'application/json');
+        return new JsonResponse(json_encode(false));
     }
 
     public static function userAddFriend($f1,$f2)
@@ -148,7 +168,8 @@ class MongoWrapper
         $u2 = $users->findOne(array('_id' => $f2));
         $users->updateOne(array('_id' => $f1), array('$push' => array('friends' => $u2)));
         $users->updateOne(array('_id' => $f2), array('$push' => array('friends' => $u1)));
-        return response('true')->header('Content-Type', 'application/json');
+//        return response('true')->header('Content-Type', 'application/json');
+        return new JsonResponse('true');
     }
 
     public static function userComments($username)
@@ -156,7 +177,8 @@ class MongoWrapper
         $db = self::getInstance();
         $users = $db->selectCollection(self::$commentsCollection);
         $result = self::bsonIterator2Array($users->find(array('toUser' => $username)));
-        return response($result)->header('Content-Type', 'application/json');
+//        return response($result)->header('Content-Type', 'application/json');
+        return new JsonResponse($result);
     }
 
 
@@ -181,7 +203,8 @@ class MongoWrapper
         );
         $comments->insertOne($comment);
         $users->updateOne(array('_id' => $data['from']), array('$push' => array('comments' => $comment)));
-        return response("true")->header('Content-Type', 'application/json');
+//        return response("true")->header('Content-Type', 'application/json');
+        return new JsonResponse('true');
     }
 
     public static function commentsGet()
@@ -189,7 +212,8 @@ class MongoWrapper
         $db=self::getInstance();
         $comments = $db->selectCollection(self::$commentsCollection);
         $result = self::bsonIterator2Array($comments->find());
-        return response($result)->header('Content-Type','application/json');
+//        return response($result)->header('Content-Type','application/json');
+        return new JsonResponse('true');
     }
 
     public static function testData()
@@ -299,7 +323,8 @@ class MongoWrapper
             $users->updateOne(array('_id' => $fromUser), array('$push' => array('comments' => $comment)));
             $komentari[] = $comment;
         }
-        return response('true')->header('Content-Type', 'application/json');
+//        return response('true')->header('Content-Type', 'application/json');
+        return new JsonResponse('true');
     }
 
     /**
@@ -313,7 +338,8 @@ class MongoWrapper
         $db->selectCollection(self::$usersOnlineCollection)->deleteMany(array());
         $db->selectCollection(self::$citiesCollection)->deleteMany(array());
         $db->selectCollection(self::$commentsCollection)->deleteMany(array());
-        return response('true')->header('Content-Type', 'application/json');
+//        return response('true')->header('Content-Type', 'application/json');
+        return new JsonResponse('true');
     }
 
     //helper
