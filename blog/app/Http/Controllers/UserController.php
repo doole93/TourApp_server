@@ -117,4 +117,9 @@ class UserController extends Controller
     {
         return MongoWrapper::cleanData();
     }
+
+    public function generateProbesCollections()
+    {
+        return MongoWrapper::generateProbesCollections();
+    }
 }

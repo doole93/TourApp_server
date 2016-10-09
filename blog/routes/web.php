@@ -46,4 +46,8 @@ Route::get('/cleanData','UserController@cleanData');
 
 //online users
 
+//funf data
+Route::get('/generateProbes','UserController@generateProbesCollections');
+
+
 

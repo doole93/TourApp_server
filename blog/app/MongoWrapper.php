@@ -8,7 +8,6 @@
 
 namespace App;
 
-use Illuminate\Http\JsonResponse;
 use \MongoDB\Client as Client;
 use Faker;
 use Psy\Util\Json;
@@ -45,8 +44,7 @@ class MongoWrapper
         if($user == null)
             return response(json_encode(null))->header('Content-Typge','application/json');
         $result= self::bson2JSON($user);
-//        return response($result)->header('Content-Type','application/json');
-        return new JsonResponse($result);
+        return response($result)->header('Content-Type','application/json');
     }
 
 
@@ -55,8 +53,7 @@ class MongoWrapper
         $db=self::getInstance();
         $users = $db->selectCollection(self::$usersCollection);
         $result = self::bsonIterator2Array($users->find());
-//        return response($result)->header('Content-Type','application/json');
-        return new JsonResponse($result);
+        return response($result)->header('Content-Type','application/json');
     }
 
     //TODO: testirati ovu fju dal radi
@@ -80,8 +77,7 @@ class MongoWrapper
                 $near[]=$onlineUsers[$friendID];
             }
         }
-//        return response($near)->header('Content-Type','application/json');
-        return new JsonResponse($near);
+        return response($near)->header('Content-Type','application/json');
     }
 
     //return online users
@@ -90,8 +86,7 @@ class MongoWrapper
         $db=self::getInstance();
         $users = $db->selectCollection(self::$usersOnlineCollection);
         $result = self::bsonIterator2Array($users->find());
-//        return response($result)->header('Content-Type','application/json');
-        return new JsonResponse($result);
+        return response($result)->header('Content-Type','application/json');
     }
 
 
@@ -104,8 +99,7 @@ class MongoWrapper
 //        $newUser['password'] = password_hash($newUser['password'],PASSWORD_DEFAULT); //bcrypt
         $users->insertOne($newUser);
         $onlineUsers->insertOne($newUser);
-//        return response('true')->header('Content-Type', 'application/json');
-        return new JsonResponse('true');
+        return response('true')->header('Content-Type', 'application/json');
     }
 
     public static function userUpdate($body)
@@ -115,16 +109,14 @@ class MongoWrapper
         $users = $db->selectCollection(self::$usersCollection);
         $body['percentage'] = number_format($body['percentage'],2);
         $users->updateOne(array('_id'=>$username),array('$set'=>$body));
-//        return response('true')->header('Content-Type', 'application/json');
-        return new JsonResponse('true');
+        return response('true')->header('Content-Type', 'application/json');
     }
 
     public static function userUpdateOnline($body)
     {
         $db = self::getInstance();
         $user = $db->selectCollection(self::$usersOnlineCollection)->updateOne(array('_id' => $body['_id']),$body);
-//        return response('true')->header('Content-Type', 'application/json');
-        return new JsonResponse('true');
+        return response('true')->header('Content-Type', 'application/json');
     }
 
     public static function userDelete($username)
@@ -132,8 +124,7 @@ class MongoWrapper
         $db=self::getInstance();
         $users = $db->selectCollection(self::$usersCollection);
         $users->deleteOne(array('_id'=>$username));
-//        return response('true')->header('Content-Type', 'application/json');
-        return new JsonResponse('true');
+        return response('true')->header('Content-Type', 'application/json');
     }
 
     public static function userValidate($body)
@@ -149,15 +140,12 @@ class MongoWrapper
             if($pass == $user['password'] )
             {
                 $result = self::bson2JSON($user);
-//                return response($result)->header('Content-Type', 'application/json');
-                return new JsonResponse($result);
+                return response($result)->header('Content-Type', 'application/json');
             }
             else
-//                return response(json_encode(false))->header('Content-Type', 'application/json');
-                return new JsonResponse(json_encode(false));
+                return response(json_encode(false))->header('Content-Type', 'application/json');
         }
-//        return response(json_encode(false))->header('Content-Type', 'application/json');
-        return new JsonResponse(json_encode(false));
+        return response(json_encode(false))->header('Content-Type', 'application/json');
     }
 
     public static function userAddFriend($f1,$f2)
@@ -168,8 +156,7 @@ class MongoWrapper
         $u2 = $users->findOne(array('_id' => $f2));
         $users->updateOne(array('_id' => $f1), array('$push' => array('friends' => $u2)));
         $users->updateOne(array('_id' => $f2), array('$push' => array('friends' => $u1)));
-//        return response('true')->header('Content-Type', 'application/json');
-        return new JsonResponse('true');
+        return response('true')->header('Content-Type', 'application/json');
     }
 
     public static function userComments($username)
@@ -177,8 +164,7 @@ class MongoWrapper
         $db = self::getInstance();
         $users = $db->selectCollection(self::$commentsCollection);
         $result = self::bsonIterator2Array($users->find(array('toUser' => $username)));
-//        return response($result)->header('Content-Type', 'application/json');
-        return new JsonResponse($result);
+        return response($result)->header('Content-Type', 'application/json');
     }
 
 
@@ -203,8 +189,7 @@ class MongoWrapper
         );
         $comments->insertOne($comment);
         $users->updateOne(array('_id' => $data['from']), array('$push' => array('comments' => $comment)));
-//        return response("true")->header('Content-Type', 'application/json');
-        return new JsonResponse('true');
+        return response("true")->header('Content-Type', 'application/json');
     }
 
     public static function commentsGet()
@@ -212,8 +197,7 @@ class MongoWrapper
         $db=self::getInstance();
         $comments = $db->selectCollection(self::$commentsCollection);
         $result = self::bsonIterator2Array($comments->find());
-//        return response($result)->header('Content-Type','application/json');
-        return new JsonResponse('true');
+        return response($result)->header('Content-Type','application/json');
     }
 
     public static function testData()
@@ -323,8 +307,7 @@ class MongoWrapper
             $users->updateOne(array('_id' => $fromUser), array('$push' => array('comments' => $comment)));
             $komentari[] = $comment;
         }
-//        return response('true')->header('Content-Type', 'application/json');
-        return new JsonResponse('true');
+        return response('true')->header('Content-Type', 'application/json');
     }
 
     /**
@@ -338,8 +321,7 @@ class MongoWrapper
         $db->selectCollection(self::$usersOnlineCollection)->deleteMany(array());
         $db->selectCollection(self::$citiesCollection)->deleteMany(array());
         $db->selectCollection(self::$commentsCollection)->deleteMany(array());
-//        return response('true')->header('Content-Type', 'application/json');
-        return new JsonResponse('true');
+        return response('true')->header('Content-Type', 'application/json');
     }
 
     //helper
@@ -365,6 +347,31 @@ class MongoWrapper
         $c = 2 * asin(sqrt($a));
         $d = $earth_radius * $c;
         return $d;
+    }
+
+    private static function testProbes()
+    {
+        $db = self::getInstance();
+        $users = $db->selectCollection(self::$usersCollection);
+    }
+
+    public static function generateProbesCollections()
+    {
+        $client = new Client();
+        $db = $client->selectDatabase('FUNF');
+        $probes = file_get_contents('../resources/funf_data/probes.csv');
+        $probes = explode(PHP_EOL, $probes);
+//
+//        $probeArray = array();
+//        foreach ($lines as $line) {
+//            $probeArray[] = str_getcsv($line);
+//        }
+//        $probeArray = array_map(function($data))
+//        dump($probes);die();
+        foreach ($probes as $probe) {
+            $db->createCollection($probe);
+        }
+        return response('true')->header('Content-Type', 'application/json');
     }
 
 }
