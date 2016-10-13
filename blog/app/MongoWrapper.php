@@ -15,10 +15,9 @@ use Psy\Util\Json;
 class MongoWrapper
 {
     //TODO sredi error handling kod komunikacije sa bazom
-
+    //TODO funf baza i slozeni upiti
     private static $db;
     private static $usersCollection = "Users";
-    private static $usersOnlineCollection = "UsersOnline";
     private static $commentsCollection = "Comments";
     private static $citiesCollection = "Cities";
 
@@ -60,20 +59,22 @@ class MongoWrapper
     public static function usersNear($user,$radius)
     {
         $db=self::getInstance();
-        $onlineUsers = self::bsonIterator2Array( $db->selectCollection(self::$usersOnlineCollection));
-//        $usersFriends = json_decode(self::bson2JSON(($currentUser['friends'])),true);
-        $usersFriends = $user['friends'];
-        $usersFriends = array_map(
+        $onlineUsers = self::bsonIterator2Array($db->selectCollection(self::$usersCollection)
+                        ->find(array('online' => true)));
+        $usersFriendsIDs = array_map(
                       function($friend) {return $friend['_id'];},
-                      $usersFriends);
+                     $user['friends']);
         $onlineUserIDs = array_map(
-            function($friend) {return $friend['_id'];},
-            $onlineUsers );
-        $friendsToCheck = array_intersect($usersFriends,$onlineUserIDs);
+                        function($friend) {return $friend['_id'];},
+                        $onlineUsers );
+        $onlineUsers = array_combine($onlineUserIDs,$onlineUsers);
+        $friendsToCheck = array_intersect($usersFriendsIDs,$onlineUserIDs);
+
         $near = array();
         foreach ($friendsToCheck as $friendID) {
-            if (self::getDistance($user['latitude'],$user['longitude'],
-                $onlineUsers[$friendID]['latitude'],$onlineUsers[$friendID]['longitude'])<$radius) {
+            $distance = self::getDistanceKM($user['latitude'],$user['longitude'],
+                $onlineUsers[$friendID]['latitude'],$onlineUsers[$friendID]['longitude']);
+            if ($distance<$radius) {
                 $near[]=$onlineUsers[$friendID];
             }
         }
@@ -83,9 +84,14 @@ class MongoWrapper
     //return online users
     public static function userGetOnlineUsers()
     {
-        $db=self::getInstance();
-        $users = $db->selectCollection(self::$usersOnlineCollection);
-        $result = self::bsonIterator2Array($users->find());
+//        $db=self::getInstance();
+//        $users = $db->selectCollection(self::$usersOnlineCollection);
+//        $result = self::bsonIterator2Array($users->find());
+//        return response($result)->header('Content-Type','application/json');
+        $db = self::getInstance();
+        $users = $db->selectCollection(self::$usersCollection);
+        $users = $users->find(array('online' => true));
+        $result = self::bsonIterator2Array($users);
         return response($result)->header('Content-Type','application/json');
     }
 
@@ -94,11 +100,9 @@ class MongoWrapper
     {
         $db=self::getInstance();
         $users = $db->selectCollection(self::$usersCollection);
-        $onlineUsers = $db->selectCollection(self::$usersOnlineCollection);
         //TODO: na kraju sifra
 //        $newUser['password'] = password_hash($newUser['password'],PASSWORD_DEFAULT); //bcrypt
         $users->insertOne($newUser);
-        $onlineUsers->insertOne($newUser);
         return response('true')->header('Content-Type', 'application/json');
     }
 
@@ -112,12 +116,12 @@ class MongoWrapper
         return response('true')->header('Content-Type', 'application/json');
     }
 
-    public static function userUpdateOnline($body)
-    {
-        $db = self::getInstance();
-        $user = $db->selectCollection(self::$usersOnlineCollection)->updateOne(array('_id' => $body['_id']),$body);
-        return response('true')->header('Content-Type', 'application/json');
-    }
+//    public static function userUpdateOnline($body)
+//    {
+//        $db = self::getInstance();
+//        $user = $db->selectCollection(self::$usersOnlineCollection)->updateOne(array('_id' => $body['_id']),$body);
+//        return response('true')->header('Content-Type', 'application/json');
+//    }
 
     public static function userDelete($username)
     {
@@ -208,7 +212,7 @@ class MongoWrapper
 
         //users
         $users = $db->selectCollection(self::$usersCollection);
-        $onlineUsers=$db->selectCollection(self::$usersOnlineCollection);
+//        $onlineUsers=$db->selectCollection(self::$usersOnlineCollection);
         $addedUsers = array();
         for ($i = 1;$i <= 10;$i++)
         {
@@ -218,9 +222,14 @@ class MongoWrapper
             $downvotes=$faker->numberBetween(1,10);
             $image=file_get_contents('../resources/images/avatars/'.$i.'.jpg');
             $imagePrepared=base64_encode($image);
+            $latRandom = $faker->numberBetween(242202,406045);
+            $longRandom = $faker->numberBetween(830177,994972);
             $user = array(
                 "_id" => $username,
                 "password" => $faker->password(),
+                "online" => $faker->boolean(),
+                "latitude" => 42+$latRandom/1000000,
+                "longitude" => 21+$longRandom/1000000,
                 "mail" => $faker->email,
                 "name" => $faker->firstName,
                 "surname" => $faker->lastName,
@@ -235,16 +244,16 @@ class MongoWrapper
             );
 
             //for static array
-            $online=$faker->boolean();
-            $users->insertOne($user);
-            if($online)
-            {
-                $onlineUsers->insertOne(array(
-                    "_id" => $user['_id'],
-                    "latitude" => 43.32,
-                    "longitude" => 21.89
-                ));
-            }
+//            $online=$faker->boolean();
+//            $users->insertOne($user);
+//            if($online)
+//            {
+//                $onlineUsers->insertOne(array(
+//                    "_id" => $user['_id'],
+//                    "latitude" => 43.32,
+//                    "longitude" => 21.89
+//                ));
+//            }
             $addedUsers[] = $username;
         }
 
@@ -318,7 +327,6 @@ class MongoWrapper
     {
         $db = self::getInstance();
         $db->selectCollection(self::$usersCollection)->deleteMany(array());
-        $db->selectCollection(self::$usersOnlineCollection)->deleteMany(array());
         $db->selectCollection(self::$citiesCollection)->deleteMany(array());
         $db->selectCollection(self::$commentsCollection)->deleteMany(array());
         return response('true')->header('Content-Type', 'application/json');
@@ -330,14 +338,14 @@ class MongoWrapper
         return \MongoDB\BSON\toJSON(\MongoDB\BSON\fromPHP($data));
     }
 
-    private static function bsonIterator2Array($array)
+    private static function bsonIterator2Array($iterator)
     {
-        $result = self::bson2JSON(iterator_to_array($array));
+        $result = self::bson2JSON(iterator_to_array($iterator));
         return json_decode($result, true);
     }
 
-    //Haversine formula for distance between two points
-    private static function getDistance($latitude1, $longitude1, $latitude2, $longitude2)
+    //Haversine formula for distance between two points - km???
+    private static function getDistanceKM($latitude1, $longitude1, $latitude2, $longitude2)
     {
         $earth_radius = 6371;
         $dLat = deg2rad($latitude2 - $latitude1);
@@ -346,32 +354,33 @@ class MongoWrapper
             * sin($dLon/2) * sin($dLon/2);
         $c = 2 * asin(sqrt($a));
         $d = $earth_radius * $c;
+        $d =  $d * 1000; //u metrima
+        $d = (int) $d;
         return $d;
-    }
-
-    private static function testProbes()
-    {
-        $db = self::getInstance();
-        $users = $db->selectCollection(self::$usersCollection);
     }
 
     public static function generateProbesCollections()
     {
-        $client = new Client();
-        $db = $client->selectDatabase('FUNF');
-        $probes = file_get_contents('../resources/funf_data/probes.csv');
-        $probes = explode(PHP_EOL, $probes);
+//        $probesCSV = file_get_contents('../resources/funf_data/ApplicationsProbe.csv');
+//        dump($probesCSV);die();
 //
-//        $probeArray = array();
-//        foreach ($lines as $line) {
-//            $probeArray[] = str_getcsv($line);
+//        $probesCSV = file_get_contents('../resources/probes.csv');
+//        $probesNamesArray = explode(PHP_EOL, $probesCSV);
+////        dump($probesNamesArray);die();
+//        foreach ($probesNamesArray as $probeName) {
+//            $probeCSV = file_get_contents("../resources/funf_data/$probeName.csv");
+////            dump($probeCSV);die();
+//            $fp = fopen("../resources/json/$probeName.json", 'w');
+//            $probesData = explode(PHP_EOL, $probeCSV);
+//            foreach ($probesData as $red) {
+//                $red = ltrim($red, '"');
+//                $red = rtrim($red, '"');
+//                $red = str_replace('""', '"', $red);
+//                $red = json_decode($red);
+//                fwrite($fp, json_encode($red));
+//            }
+//            fclose($fp);
 //        }
-//        $probeArray = array_map(function($data))
-//        dump($probes);die();
-        foreach ($probes as $probe) {
-            $db->createCollection($probe);
-        }
-        return response('true')->header('Content-Type', 'application/json');
+//        return response('true')->header('Content-Type', 'application/json');
     }
-
 }

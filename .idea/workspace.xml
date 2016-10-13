@@ -2,14 +2,65 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f621654f-9681-4229-bbe3-d2c7b0ccb13a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/journal/WiredTigerLog.0000000031" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/journal/WiredTigerPreplog.0000000001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/journal/WiredTigerPreplog.0000000002" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-0--8881243576030805859.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-44--985211485673121336.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-46--985211485673121336.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-48--985211485673121336.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-50--985211485673121336.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-52--985211485673121336.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-54--985211485673121336.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-56--985211485673121336.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-58--985211485673121336.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-60--985211485673121336.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-62--985211485673121336.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-64--985211485673121336.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-66--985211485673121336.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-68--985211485673121336.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-70--985211485673121336.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-72--985211485673121336.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-74--985211485673121336.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-76--985211485673121336.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-78--985211485673121336.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-80--985211485673121336.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-82--985211485673121336.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-1--8881243576030805859.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-45--985211485673121336.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-47--985211485673121336.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-49--985211485673121336.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-51--985211485673121336.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-53--985211485673121336.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-55--985211485673121336.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-57--985211485673121336.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-59--985211485673121336.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-61--985211485673121336.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-63--985211485673121336.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-65--985211485673121336.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-67--985211485673121336.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-69--985211485673121336.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-71--985211485673121336.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-73--985211485673121336.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-75--985211485673121336.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-77--985211485673121336.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-79--985211485673121336.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-81--985211485673121336.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-83--985211485673121336.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/journal/WiredTigerLog.0000000052" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/journal/WiredTigerPreplog.0000000018" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/journal/WiredTigerPreplog.0000000019" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/journal/WiredTigerPreplog.0000000020" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/journal/WiredTigerPreplog.0000000021" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/journal/WiredTigerPreplog.0000000022" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/resources/funf_data/probes.csv" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/WiredTiger.wt" afterPath="$PROJECT_DIR$/blog/db/data/WiredTiger.wt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/_mdb_catalog.wt" afterPath="$PROJECT_DIR$/blog/db/data/_mdb_catalog.wt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/collection-0--2858305882364720908.wt" afterPath="$PROJECT_DIR$/blog/db/data/collection-0--2858305882364720908.wt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/collection-0--382631452534565865.wt" afterPath="$PROJECT_DIR$/blog/db/data/collection-0--382631452534565865.wt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/collection-0-7239065716607211677.wt" afterPath="$PROJECT_DIR$/blog/db/data/collection-0-7239065716607211677.wt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/collection-4--382631452534565865.wt" afterPath="$PROJECT_DIR$/blog/db/data/collection-4--382631452534565865.wt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/index-1--2858305882364720908.wt" afterPath="$PROJECT_DIR$/blog/db/data/index-1--2858305882364720908.wt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/index-1--382631452534565865.wt" afterPath="$PROJECT_DIR$/blog/db/data/index-1--382631452534565865.wt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/index-1-7239065716607211677.wt" afterPath="$PROJECT_DIR$/blog/db/data/index-1-7239065716607211677.wt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/index-5--382631452534565865.wt" afterPath="$PROJECT_DIR$/blog/db/data/index-5--382631452534565865.wt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/mongod.lock" afterPath="$PROJECT_DIR$/blog/db/data/mongod.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/sizeStorer.wt" afterPath="$PROJECT_DIR$/blog/db/data/sizeStorer.wt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -40,32 +91,32 @@
       <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blog/app/Http/Controllers/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="617">
-              <caret line="112" column="40" selection-start-line="112" selection-start-column="40" selection-end-line="112" selection-end-column="40" />
+            <state relative-caret-position="306">
+              <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
               <folding>
-                <marker date="1476020697277" expanded="true" signature="2431:2437" ph="{...}" />
+                <marker date="1476134399829" expanded="true" signature="2475:2481" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MongoWrapper.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MongoWrapper.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blog/app/MongoWrapper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
-              <caret line="53" column="63" selection-start-line="53" selection-start-column="63" selection-end-line="53" selection-end-column="63" />
+            <state relative-caret-position="459">
+              <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
               <folding>
-                <element signature="e#9074#10259#0#PHP" expanded="false" />
+                <element signature="e#9596#10781#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="web.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blog/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
+            <state relative-caret-position="291">
+              <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
               <folding>
                 <element signature="e#7#386#0#PHP" expanded="true" />
                 <element signature="e#404#447#1#PHP" expanded="false" />
@@ -129,7 +180,7 @@
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
-      <showMembers />
+      <showMembers ProjectPane="true" />
       <showModules />
       <showLibraryContents />
       <hideEmptyPackages />
@@ -141,11 +192,60 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="ProjectPane">
-        <subPane />
-      </pane>
       <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel_test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel_test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel_test" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel_test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel_test" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel_test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel_test" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -153,7 +253,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="Laravel.SettingsForm" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="git&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/.gitignore&#10;giti&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/.gitignore&#10;gitig&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/.gitignore&#10;ignore&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/.gitignore&#10;web.php&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/routes/web.php&#10;web&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/routes/web.php&#10;data&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/vendor/mongodb/mongodb/src/Database.php&#10;kerne&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/app/Http/Kernel.php&#10;mongowra&#9;null&#9;null&#10;Faker&#9;null&#9;null&#10;usercon&#9;null&#9;null&#10;composer&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/composer.json&#10;app&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/routes/api.php&#10;databa&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/config/database.php&#10;servicepro&#9;null&#9;null&#10;routecolle&#9;null&#9;null&#10;database.php&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/config/database.php&#10;app.php&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/config/app.php" />
+    <property name="SearchEverywhereHistoryKey" value="mongow&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/app/MongoWrapper.php&#10;git&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/.gitignore&#10;giti&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/.gitignore&#10;gitig&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/.gitignore&#10;ignore&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/.gitignore&#10;web.php&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/routes/web.php&#10;web&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/routes/web.php&#10;data&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/vendor/mongodb/mongodb/src/Database.php&#10;kerne&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/app/Http/Kernel.php&#10;mongowra&#9;null&#9;null&#10;Faker&#9;null&#9;null&#10;usercon&#9;null&#9;null&#10;composer&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/composer.json&#10;app&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/routes/api.php&#10;databa&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/config/database.php&#10;servicepro&#9;null&#9;null&#10;routecolle&#9;null&#9;null&#10;database.php&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/config/database.php&#10;app.php&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/config/app.php" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files (x86)\nodejs\node.exe" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="nodejs_interpreter_path" value="C:/Program Files (x86)/nodejs/node" />
@@ -260,12 +360,16 @@
       <workItem from="1475799382159" duration="102000" />
       <workItem from="1475930697495" duration="4204000" />
       <workItem from="1475941282354" duration="2026000" />
-      <workItem from="1476017319796" duration="5362000" />
+      <workItem from="1476017319796" duration="9188000" />
+      <workItem from="1476046368692" duration="7107000" />
+      <workItem from="1476118083372" duration="10003000" />
+      <workItem from="1476223297365" duration="62000" />
+      <workItem from="1476305972855" duration="2473000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128320000" />
+    <option name="totallyTimeSpent" value="151791000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -280,13 +384,13 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48667377" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1913646" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4787472" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32997763" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32997763" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20469083" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31543624" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31543624" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32997763" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -323,34 +427,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/blog/app/Http/Middleware/EncryptCookies.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/jenssegers/mongodb/src/Jenssegers/Mongodb/Connection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/vendor/symfony/routing/Route.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="846" column="13" selection-start-line="846" selection-start-column="13" selection-end-line="846" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blog/vendor/mongodb/mongodb/src/Client.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -540,13 +616,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/illuminate/support/helpers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="539" column="13" selection-start-line="539" selection-start-column="13" selection-end-line="539" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/mongo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
@@ -558,13 +627,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
           <caret line="297" column="11" selection-start-line="297" selection-start-column="11" selection-end-line="297" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/vendor/mongodb/mongodb/src/Collection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="80" column="20" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -661,33 +723,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog/app/Http/Controllers/UserController.php">
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/Core_d.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="617">
-          <caret line="112" column="40" selection-start-line="112" selection-start-column="40" selection-end-line="112" selection-end-column="40" />
-          <folding>
-            <marker date="1476020697277" expanded="true" signature="2431:2437" ph="{...}" />
-          </folding>
+        <state relative-caret-position="388">
+          <caret line="333" column="9" selection-start-line="333" selection-start-column="9" selection-end-line="333" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog/routes/web.php">
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_5.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
+        <state relative-caret-position="798">
+          <caret line="1093" column="9" selection-start-line="1093" selection-start-column="9" selection-end-line="1093" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/resources/funf_data/probes.csv" />
+    <entry file="file://$PROJECT_DIR$/vendor/illuminate/support/helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="723" column="31" selection-start-line="723" selection-start-column="31" selection-end-line="723" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/vendor/fzaninotto/faker/src/Faker/Generator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="122" column="20" selection-start-line="122" selection-start-column="20" selection-end-line="122" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/vendor/mongodb/mongodb/src/Collection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="419" column="20" selection-start-line="419" selection-start-column="20" selection-end-line="419" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/app/Http/Controllers/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
           <folding>
-            <element signature="e#7#386#0#PHP" expanded="true" />
-            <element signature="e#404#447#1#PHP" expanded="false" />
+            <marker date="1476134399829" expanded="true" signature="2475:2481" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/blog/app/MongoWrapper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="53" column="63" selection-start-line="53" selection-start-column="63" selection-end-line="53" selection-end-column="63" />
+        <state relative-caret-position="459">
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
           <folding>
-            <element signature="e#9074#10259#0#PHP" expanded="false" />
+            <element signature="e#9596#10781#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+          <folding>
+            <element signature="e#7#386#0#PHP" expanded="true" />
+            <element signature="e#404#447#1#PHP" expanded="false" />
           </folding>
         </state>
       </provider>

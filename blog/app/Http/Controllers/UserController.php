@@ -15,11 +15,10 @@ class UserController extends Controller
         return $allUsers;
     }
 
-    public function usersNear($radius)
+    public function usersNear()
     {
-        return MongoWrapper::usersNear(request()->all(),$radius);
+        return MongoWrapper::usersNear(request()->all(),request('radius'));
     }
-
 
     public function userGet($username)
     {
@@ -40,23 +39,23 @@ class UserController extends Controller
     {
         return MongoWrapper::usersAdd(request()->all());
     }
+//
+//    public function userAddCity($username)
+//    {
+//        $body = request()->all();
+//        $lat = $body['lat']; $long = $body['long'];
+//        return MongoWrapper::userAddCity($username,$lat,$long);
+//    }
 
-    public function userAddCity($username)
-    {
-        $body = request()->all();
-        $lat = $body['lat']; $long = $body['long'];
-        return MongoWrapper::userAddCity($username,$lat,$long);
-    }
-
-    public function userAddUpvote($username)
-    {
-        return MongoWrapper::userAddUpDownvote($username,true);
-    }
-
-    public function userAddDownvote($username)
-    {
-       return MongoWrapper::userAddUpDownvote($username,false);
-    }
+//    public function userAddUpvote($username)
+//    {
+//        return MongoWrapper::userAddUpDownvote($username,true);
+//    }
+//
+//    public function userAddDownvote($username)
+//    {
+//       return MongoWrapper::userAddUpDownvote($username,false);
+//    }
 
     public function userUpdate()
     {
@@ -68,11 +67,11 @@ class UserController extends Controller
         return MongoWrapper::userValidate(request()->all());
     }
 
-    public function userOnlineUpdate()
-    {
-        $body = request()->all();
-        return MongoWrapper::userUpdateOnline($body);
-    }
+//    public function userOnlineUpdate()
+//    {
+//        $body = request()->all();
+//        return MongoWrapper::userUpdateOnline($body);
+//    }
 
     public function userDelete($username)
     {
@@ -122,4 +121,6 @@ class UserController extends Controller
     {
         return MongoWrapper::generateProbesCollections();
     }
+
+
 }
