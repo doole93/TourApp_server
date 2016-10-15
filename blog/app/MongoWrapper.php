@@ -69,10 +69,9 @@ class MongoWrapper
                         $onlineUsers );
         $onlineUsers = array_combine($onlineUserIDs,$onlineUsers);
         $friendsToCheck = array_intersect($usersFriendsIDs,$onlineUserIDs);
-
         $near = array();
         foreach ($friendsToCheck as $friendID) {
-            $distance = self::getDistanceKM($user['latitude'],$user['longitude'],
+            $distance = self::haversineGreatCircleDistance($user['latitude'],$user['longitude'],
                 $onlineUsers[$friendID]['latitude'],$onlineUsers[$friendID]['longitude']);
             if ($distance<$radius) {
                 $near[]=$onlineUsers[$friendID];
@@ -345,7 +344,7 @@ class MongoWrapper
     }
 
     //Haversine formula for distance between two points - km???
-    private static function getDistanceKM($latitude1, $longitude1, $latitude2, $longitude2)
+    private static function getDistanceM($latitude1, $longitude1, $latitude2, $longitude2)
     {
         $earth_radius = 6371;
         $dLat = deg2rad($latitude2 - $latitude1);
@@ -357,6 +356,23 @@ class MongoWrapper
         $d =  $d * 1000; //u metrima
         $d = (int) $d;
         return $d;
+    }
+
+    public static function haversineGreatCircleDistance(
+        $latitudeFrom, $longitudeFrom, $latitudeTo, $longitudeTo, $earthRadius = 6371000)
+    {
+        // convert from degrees to radians
+        $latFrom = deg2rad($latitudeFrom);
+        $lonFrom = deg2rad($longitudeFrom);
+        $latTo = deg2rad($latitudeTo);
+        $lonTo = deg2rad($longitudeTo);
+
+        $latDelta = $latTo - $latFrom;
+        $lonDelta = $lonTo - $lonFrom;
+
+        $angle = 2 * asin(sqrt(pow(sin($latDelta / 2), 2) +
+                cos($latFrom) * cos($latTo) * pow(sin($lonDelta / 2), 2)));
+        return ($angle * $earthRadius)/1000000;
     }
 
     public static function generateProbesCollections()
