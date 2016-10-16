@@ -85,10 +85,7 @@ class UserController extends Controller
 
     public function userAddFriend()
     {
-        $body=request()->all();
-        $f1=$body['f1'];
-        $f2=$body['f2'];
-        return MongoWrapper::userAddFriend($f1,$f2);
+        return MongoWrapper::userAddFriend(request()->all(),request('friendId'));;
     }
 
     //cities

@@ -27,6 +27,7 @@ Route::get('/users/online','UserController@userGetOnlineUsers');
 Route::get('/users/{username}','UserController@userGet');
 Route::post('/usersNear','UserController@usersNear');
 Route::post('/users/validate','UserController@userValidate');
+Route::post('/users/addFriend','UserController@userAddFriend');
 Route::delete('/users/{username}','UserController@userDelete');
 
 

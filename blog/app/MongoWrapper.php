@@ -81,6 +81,15 @@ class MongoWrapper
         return response($near)->header('Content-Type','application/json');
     }
 
+    public static function userAddFriend($user,$friendId)
+    {
+        $user['friends'][]=$friendId;
+        $db = self::getInstance();
+        $db->selectCollection(self::$usersCollection)
+            ->updateOne(array('_id'=>$user['_id']),array('$set'=>$user));
+        return response('true')->header('Content-Type', 'application/json');
+    }
+
     //return online users
     public static function userGetOnlineUsers()
     {
@@ -150,17 +159,6 @@ class MongoWrapper
                 return response(json_encode(false))->header('Content-Type', 'application/json');
         }
         return response(json_encode(false))->header('Content-Type', 'application/json');
-    }
-
-    public static function userAddFriend($f1,$f2)
-    {
-        $db = self::getInstance();
-        $users = $db->selectCollection(self::$usersCollection);
-        $u1 = $users->findOne(array('_id' => $f1));
-        $u2 = $users->findOne(array('_id' => $f2));
-        $users->updateOne(array('_id' => $f1), array('$push' => array('friends' => $u2)));
-        $users->updateOne(array('_id' => $f2), array('$push' => array('friends' => $u1)));
-        return response('true')->header('Content-Type', 'application/json');
     }
 
 //    public static function userComments($username)
