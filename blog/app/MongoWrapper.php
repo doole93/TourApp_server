@@ -35,6 +35,7 @@ class MongoWrapper
     }
 
 
+    //proveri da vec nije online - zbog logovanja sa vise mesta
     public static function userGet($username)
     {
         $db=self::getInstance();
@@ -162,13 +163,13 @@ class MongoWrapper
         return response('true')->header('Content-Type', 'application/json');
     }
 
-    public static function userComments($username)
-    {
-        $db = self::getInstance();
-        $users = $db->selectCollection(self::$commentsCollection);
-        $result = self::bsonIterator2Array($users->find(array('toUser' => $username)));
-        return response($result)->header('Content-Type', 'application/json');
-    }
+//    public static function userComments($username)
+//    {
+//        $db = self::getInstance();
+//        $users = $db->selectCollection(self::$commentsCollection);
+//        $result = self::bsonIterator2Array($users->find(array('toUser' => $username)));
+//        return response($result)->header('Content-Type', 'application/json');
+//    }
 
 
     //cities
@@ -182,7 +183,7 @@ class MongoWrapper
     //comments
     public static function commentAdd($data)
     {
-        $db=self::getInstance();
+        $db = self::getInstance();
         $users = $db->selectCollection(self::$usersCollection);
         $comments = $db->selectCollection(self::$commentsCollection);
         $comment=array(
@@ -206,16 +207,14 @@ class MongoWrapper
     public static function testData()
     {
         $faker = Faker\Factory::create();
-        $client = new Client();
-        $db=$client->selectDatabase('TourApp');
+        $db = self::getInstance();
 
         //users
         $users = $db->selectCollection(self::$usersCollection);
-//        $onlineUsers=$db->selectCollection(self::$usersOnlineCollection);
         $addedUsers = array();
-        for ($i = 1;$i <= 10;$i++)
+        $addedUsersObjects = array();
+        for ($i = 1;$i <= 20;$i++)
         {
-            $userObject = new User();
             $username=$faker->userName;
             $upvotes=$faker->numberBetween(1,10);
             $downvotes=$faker->numberBetween(1,10);
@@ -241,19 +240,8 @@ class MongoWrapper
                 'downvotes' => $downvotes,
                 'percentage' => number_format($upvotes *100/($upvotes+$downvotes),2)
             );
-
-            //for static array
-//            $online=$faker->boolean();
-//            $users->insertOne($user);
-//            if($online)
-//            {
-//                $onlineUsers->insertOne(array(
-//                    "_id" => $user['_id'],
-//                    "latitude" => 43.32,
-//                    "longitude" => 21.89
-//                ));
-//            }
             $addedUsers[] = $username;
+            $addedUsersObjects[$username] = $user;
         }
 
         //cities
@@ -300,20 +288,26 @@ class MongoWrapper
 
         //comments
         $comments=$db->selectCollection(self::$commentsCollection);
-        $komentari=array();
         for ($i = 1;$i<=30;$i++)
         {
-            $usernameFrom=$addedUsers[array_rand($addedUsers)];
-            $usernameTo=$addedUsers[array_rand($addedUsers)];
-            $fromUser =  $users->findOne(array('_id' => $usernameFrom))->_id;
+            $fromUser=$addedUsers[array_rand($addedUsers)];
+            do
+                $usernameTo=$addedUsers[array_rand($addedUsers)];
+            while($fromUser==$usernameTo);
+
             $comment= array(
-                '_id' => $faker->dateTimeThisYear->getTimestamp()."_$fromUser",
+                '_id' => $faker->dateTimeThisYear->getTimestamp()."_.$fromUser",
                 'content' => $faker->text($faker->numberBetween(20,50)),
                 'toUser' => $usernameTo
             );
             $comments->insertOne($comment);
-            $users->updateOne(array('_id' => $fromUser), array('$push' => array('comments' => $comment)));
-            $komentari[] = $comment;
+//            $users->updateOne(array('_id' => $fromUser), array('$push' => array('comments' => $comment)));
+//            $komentari[] = $comment;
+            $addedUsersObjects[$usernameTo]['comments'][] = $comment;
+        }
+
+        foreach ($addedUsersObjects as $userObject){
+            $users->insertOne($userObject);
         }
         return response('true')->header('Content-Type', 'application/json');
     }
@@ -344,19 +338,19 @@ class MongoWrapper
     }
 
     //Haversine formula for distance between two points - km???
-    private static function getDistanceM($latitude1, $longitude1, $latitude2, $longitude2)
-    {
-        $earth_radius = 6371;
-        $dLat = deg2rad($latitude2 - $latitude1);
-        $dLon = deg2rad($longitude2 - $longitude1);
-        $a = sin($dLat/2) * sin($dLat/2) + cos(deg2rad($latitude1)) * cos(deg2rad($latitude2))
-            * sin($dLon/2) * sin($dLon/2);
-        $c = 2 * asin(sqrt($a));
-        $d = $earth_radius * $c;
-        $d =  $d * 1000; //u metrima
-        $d = (int) $d;
-        return $d;
-    }
+//    private static function getDistanceM($latitude1, $longitude1, $latitude2, $longitude2)
+//    {
+//        $earth_radius = 6371;
+//        $dLat = deg2rad($latitude2 - $latitude1);
+//        $dLon = deg2rad($longitude2 - $longitude1);
+//        $a = sin($dLat/2) * sin($dLat/2) + cos(deg2rad($latitude1)) * cos(deg2rad($latitude2))
+//            * sin($dLon/2) * sin($dLon/2);
+//        $c = 2 * asin(sqrt($a));
+//        $d = $earth_radius * $c;
+//        $d =  $d * 1000; //u metrima
+//        $d = (int) $d;
+//        return $d;
+//    }
 
     public static function haversineGreatCircleDistance(
         $latitudeFrom, $longitudeFrom, $latitudeTo, $longitudeTo, $earthRadius = 6371000)
@@ -373,30 +367,5 @@ class MongoWrapper
         $angle = 2 * asin(sqrt(pow(sin($latDelta / 2), 2) +
                 cos($latFrom) * cos($latTo) * pow(sin($lonDelta / 2), 2)));
         return ($angle * $earthRadius)/1000000;
-    }
-
-    public static function generateProbesCollections()
-    {
-//        $probesCSV = file_get_contents('../resources/funf_data/ApplicationsProbe.csv');
-//        dump($probesCSV);die();
-//
-//        $probesCSV = file_get_contents('../resources/probes.csv');
-//        $probesNamesArray = explode(PHP_EOL, $probesCSV);
-////        dump($probesNamesArray);die();
-//        foreach ($probesNamesArray as $probeName) {
-//            $probeCSV = file_get_contents("../resources/funf_data/$probeName.csv");
-////            dump($probeCSV);die();
-//            $fp = fopen("../resources/json/$probeName.json", 'w');
-//            $probesData = explode(PHP_EOL, $probeCSV);
-//            foreach ($probesData as $red) {
-//                $red = ltrim($red, '"');
-//                $red = rtrim($red, '"');
-//                $red = str_replace('""', '"', $red);
-//                $red = json_decode($red);
-//                fwrite($fp, json_encode($red));
-//            }
-//            fclose($fp);
-//        }
-//        return response('true')->header('Content-Type', 'application/json');
     }
 }

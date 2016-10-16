@@ -2,13 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f621654f-9681-4229-bbe3-d2c7b0ccb13a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/journal/WiredTigerLog.0000000099" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/journal/WiredTigerLog.0000000100" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/WiredTiger.wt" afterPath="$PROJECT_DIR$/blog/db/data/WiredTiger.wt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/collection-0--2858305882364720908.wt" afterPath="$PROJECT_DIR$/blog/db/data/collection-0--2858305882364720908.wt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/collection-0--382631452534565865.wt" afterPath="$PROJECT_DIR$/blog/db/data/collection-0--382631452534565865.wt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/collection-0-7239065716607211677.wt" afterPath="$PROJECT_DIR$/blog/db/data/collection-0-7239065716607211677.wt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/collection-4--382631452534565865.wt" afterPath="$PROJECT_DIR$/blog/db/data/collection-4--382631452534565865.wt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/index-1--2858305882364720908.wt" afterPath="$PROJECT_DIR$/blog/db/data/index-1--2858305882364720908.wt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/index-1--382631452534565865.wt" afterPath="$PROJECT_DIR$/blog/db/data/index-1--382631452534565865.wt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/index-1-7239065716607211677.wt" afterPath="$PROJECT_DIR$/blog/db/data/index-1-7239065716607211677.wt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/index-5--382631452534565865.wt" afterPath="$PROJECT_DIR$/blog/db/data/index-5--382631452534565865.wt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/mongod.lock" afterPath="$PROJECT_DIR$/blog/db/data/mongod.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/sizeStorer.wt" afterPath="$PROJECT_DIR$/blog/db/data/sizeStorer.wt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/app/MongoWrapper.php" afterPath="$PROJECT_DIR$/blog/app/MongoWrapper.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/WiredTiger.turtle" afterPath="$PROJECT_DIR$/blog/db/data/WiredTiger.turtle" />
     </list>
     <ignored path="laravel_test.iws" />
@@ -33,8 +40,8 @@
       <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blog/app/Http/Controllers/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+            <state relative-caret-position="1955">
+              <caret line="116" column="35" selection-start-line="116" selection-start-column="35" selection-end-line="116" selection-end-column="35" />
               <folding>
                 <marker date="1476134399829" expanded="true" signature="2475:2481" ph="{...}" />
               </folding>
@@ -45,10 +52,10 @@
       <file leaf-file-name="MongoWrapper.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blog/app/MongoWrapper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="258" column="16" selection-start-line="258" selection-start-column="16" selection-end-line="258" selection-end-column="16" />
+            <state relative-caret-position="317">
+              <caret line="67" column="35" selection-start-line="67" selection-start-column="35" selection-end-line="67" selection-end-column="35" />
               <folding>
-                <element signature="e#9610#10795#0#PHP" expanded="false" />
+                <element signature="e#9247#10432#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -57,8 +64,8 @@
       <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blog/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="27" column="50" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="50" />
+            <state relative-caret-position="595">
+              <caret line="44" column="49" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="49" />
               <folding>
                 <element signature="e#7#386#0#PHP" expanded="true" />
                 <element signature="e#404#447#1#PHP" expanded="false" />
@@ -309,12 +316,14 @@
       <workItem from="1476305972855" duration="2473000" />
       <workItem from="1476317793297" duration="821000" />
       <workItem from="1476488847136" duration="652000" />
-      <workItem from="1476524971627" duration="4307000" />
+      <workItem from="1476524971627" duration="9468000" />
+      <workItem from="1476647692380" duration="34000" />
+      <workItem from="1476647734999" duration="1033000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="157571000" />
+    <option name="totallyTimeSpent" value="163799000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -329,13 +338,12 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1977612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20042644" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4787472" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32997763" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32997763" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32997763" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20469083" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20309168" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31543624" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -345,6 +353,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32997763" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -706,31 +715,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/blog/app/Http/Controllers/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+        <state relative-caret-position="1955">
+          <caret line="116" column="35" selection-start-line="116" selection-start-column="35" selection-end-line="116" selection-end-column="35" />
           <folding>
             <marker date="1476134399829" expanded="true" signature="2475:2481" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog/routes/web.php">
+    <entry file="file://$PROJECT_DIR$/blog/app/MongoWrapper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="27" column="50" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="50" />
+        <state relative-caret-position="317">
+          <caret line="67" column="35" selection-start-line="67" selection-start-column="35" selection-end-line="67" selection-end-column="35" />
           <folding>
-            <element signature="e#7#386#0#PHP" expanded="true" />
-            <element signature="e#404#447#1#PHP" expanded="false" />
+            <element signature="e#9247#10432#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog/app/MongoWrapper.php">
+    <entry file="file://$PROJECT_DIR$/blog/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="258" column="16" selection-start-line="258" selection-start-column="16" selection-end-line="258" selection-end-column="16" />
+        <state relative-caret-position="595">
+          <caret line="44" column="49" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="49" />
           <folding>
-            <element signature="e#9610#10795#0#PHP" expanded="false" />
+            <element signature="e#7#386#0#PHP" expanded="true" />
+            <element signature="e#404#447#1#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
