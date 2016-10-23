@@ -151,6 +151,7 @@ class MongoWrapper
             $pass = $body['password'];
             if($pass == $user['password'] )
             {
+                $user['online'] = true;
                 $result = self::bson2JSON($user);
                 return response($result)->header('Content-Type', 'application/json');
             }
@@ -159,15 +160,6 @@ class MongoWrapper
         }
         return response(json_encode(false))->header('Content-Type', 'application/json');
     }
-
-//    public static function userComments($username)
-//    {
-//        $db = self::getInstance();
-//        $users = $db->selectCollection(self::$commentsCollection);
-//        $result = self::bsonIterator2Array($users->find(array('toUser' => $username)));
-//        return response($result)->header('Content-Type', 'application/json');
-//    }
-
 
     //cities
     public static function citiesGet()
