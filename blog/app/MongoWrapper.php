@@ -14,7 +14,6 @@ use Psy\Util\Json;
 
 class MongoWrapper
 {
-    //TODO sredi error handling kod komunikacije sa bazom
     //TODO funf baza i slozeni upiti
     private static $db;
     private static $usersCollection = "Users";
@@ -242,6 +241,17 @@ class MongoWrapper
             $addedUsersObjects[$username] = $user;
         }
 
+        //fill friends
+        foreach ($addedUsersObjects as $userObject) {
+            $numFriends = $faker->numberBetween(1,19);
+            for($i=0; $i<$numFriends;$i++) {
+                do
+                    $friend = array_rand($addedUsers);
+                while ($friend == $userObject['_id'] || in_array($addedUsers[$friend],$userObject['friends']));
+                $userObject['friends'][] = $addedUsers[$friend];
+            }
+        }
+
         //cities
         $cities=$db->selectCollection(self::$citiesCollection);
         $addedCities=array(
@@ -294,7 +304,7 @@ class MongoWrapper
             while($fromUser==$usernameTo);
 
             $comment= array(
-                '_id' => $faker->dateTimeThisYear->getTimestamp()."_.$fromUser",
+                '_id' => $faker->dateTimeThisYear->getTimestamp()."_$fromUser",
                 'content' => $faker->text($faker->numberBetween(20,50)),
                 'toUser' => $usernameTo
             );

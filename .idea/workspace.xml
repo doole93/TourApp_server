@@ -2,18 +2,112 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f621654f-9681-4229-bbe3-d2c7b0ccb13a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/journal/WiredTigerLog.0000000102" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-0--2858305882364720908.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-0--382631452534565865.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-0-7239065716607211677.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-10--2858305882364720908.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-10-727684664631794636.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-12-727684664631794636.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-14-727684664631794636.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-16-727684664631794636.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-18-727684664631794636.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-2-7239065716607211677.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-2-727684664631794636.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-20-727684664631794636.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-22-727684664631794636.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-24-727684664631794636.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-26-727684664631794636.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-28-727684664631794636.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-30-727684664631794636.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-32-727684664631794636.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-34-727684664631794636.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-36-727684664631794636.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-4--2858305882364720908.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-4--382631452534565865.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-4-727684664631794636.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-6--2858305882364720908.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-6-727684664631794636.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-8--2858305882364720908.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/collection-8-727684664631794636.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-09-14T15-13-11Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-09-14T15-18-21Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-09-14T16-14-11Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-09-14T17-41-31Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-09-19T11-49-38Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-09-20T11-38-10Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-09-22T00-26-14Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-09-22T01-10-41Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-09-22T01-16-13Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-09-22T01-16-52Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-09-22T01-23-30Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-09-22T09-34-23Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-09-22T09-58-44Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-09-22T16-10-03Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-09-23T09-22-29Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-09-26T17-29-26Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-09-27T14-26-51Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-09-28T15-34-24Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-09-28T18-23-29Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-09-29T14-04-26Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-09-30T09-56-02Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-09-30T09-57-03Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-10-01T15-52-06Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-10-01T17-45-29Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-10-03T20-26-37Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-10-04T21-34-29Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-10-05T18-17-14Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-10-06T21-51-36Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-10-06T21-52-12Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-10-08T12-36-52Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-10-08T15-41-28Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-10-09T12-01-53Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-10-09T15-22-41Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-10-09T20-51-32Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-10-10T16-48-11Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-10-11T20-41-15Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-10-12T20-50-37Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-10-13T18-24-53Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-10-14T18-16-11Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-10-15T09-55-02Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-10-15T19-14-58Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-10-16T11-53-33Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-10-16T19-57-02Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/diagnostic.data/metrics.2016-10-16T20-44-36Z-00000" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-1--2858305882364720908.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-1--382631452534565865.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-1-7239065716607211677.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-11--2858305882364720908.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-11-727684664631794636.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-13-727684664631794636.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-15-727684664631794636.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-17-727684664631794636.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-19-727684664631794636.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-21-727684664631794636.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-23-727684664631794636.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-25-727684664631794636.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-27-727684664631794636.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-29-727684664631794636.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-3-7239065716607211677.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-3-727684664631794636.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-31-727684664631794636.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-33-727684664631794636.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-35-727684664631794636.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-37-727684664631794636.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-5--2858305882364720908.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-5--382631452534565865.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-5-727684664631794636.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-7--2858305882364720908.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-7-727684664631794636.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-9--2858305882364720908.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/index-9-727684664631794636.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/journal/WiredTigerLog.0000000103" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/probes.bat" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/WiredTiger.wt" afterPath="$PROJECT_DIR$/blog/db/data/WiredTiger.wt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/collection-0--382631452534565865.wt" afterPath="$PROJECT_DIR$/blog/db/data/collection-0--382631452534565865.wt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/collection-4--382631452534565865.wt" afterPath="$PROJECT_DIR$/blog/db/data/collection-4--382631452534565865.wt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/index-1--382631452534565865.wt" afterPath="$PROJECT_DIR$/blog/db/data/index-1--382631452534565865.wt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/mongod.lock" afterPath="$PROJECT_DIR$/blog/db/data/mongod.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/_mdb_catalog.wt" afterPath="$PROJECT_DIR$/blog/db/data/_mdb_catalog.wt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/sizeStorer.wt" afterPath="$PROJECT_DIR$/blog/db/data/sizeStorer.wt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/app/Http/Controllers/UserController.php" afterPath="$PROJECT_DIR$/blog/app/Http/Controllers/UserController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/app/MongoWrapper.php" afterPath="$PROJECT_DIR$/blog/app/MongoWrapper.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/WiredTiger.turtle" afterPath="$PROJECT_DIR$/blog/db/data/WiredTiger.turtle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/routes/web.php" afterPath="$PROJECT_DIR$/blog/routes/web.php" />
     </list>
     <ignored path="laravel_test.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,39 +128,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blog/app/Http/Controllers/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+            <state relative-caret-position="510">
+              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding>
-                <marker date="1476650839885" expanded="true" signature="2423:2429" ph="{...}" />
+                <element signature="e#40#61#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MongoWrapper.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MongoWrapper.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blog/app/MongoWrapper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="70" column="66" selection-start-line="70" selection-start-column="66" selection-end-line="70" selection-end-column="66" />
-              <folding>
-                <element signature="e#9071#10256#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blog/routes/web.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="447">
-              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-              <folding>
-                <element signature="e#7#386#0#PHP" expanded="true" />
-                <element signature="e#404#447#1#PHP" expanded="false" />
-              </folding>
+            <state relative-caret-position="489">
+              <caret line="157" column="96" selection-start-line="157" selection-start-column="96" selection-end-line="157" selection-end-column="96" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -95,8 +174,8 @@
         <option value="$PROJECT_DIR$/blog/app/User.php" />
         <option value="$PROJECT_DIR$/blog/.gitignore" />
         <option value="$PROJECT_DIR$/blog/routes/web.php" />
-        <option value="$PROJECT_DIR$/blog/app/MongoWrapper.php" />
         <option value="$PROJECT_DIR$/blog/app/Http/Controllers/UserController.php" />
+        <option value="$PROJECT_DIR$/blog/app/MongoWrapper.php" />
       </list>
     </option>
   </component>
@@ -139,7 +218,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -192,6 +270,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -199,7 +278,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="Laravel.SettingsForm" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="mongow&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/app/MongoWrapper.php&#10;git&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/.gitignore&#10;giti&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/.gitignore&#10;gitig&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/.gitignore&#10;ignore&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/.gitignore&#10;web.php&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/routes/web.php&#10;web&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/routes/web.php&#10;data&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/vendor/mongodb/mongodb/src/Database.php&#10;kerne&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/app/Http/Kernel.php&#10;mongowra&#9;null&#9;null&#10;Faker&#9;null&#9;null&#10;usercon&#9;null&#9;null&#10;composer&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/composer.json&#10;app&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/routes/api.php&#10;databa&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/config/database.php&#10;servicepro&#9;null&#9;null&#10;routecolle&#9;null&#9;null&#10;database.php&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/config/database.php&#10;app.php&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/config/app.php" />
+    <property name="SearchEverywhereHistoryKey" value="mongowra&#9;null&#9;null&#10;mongowrapp&#9;null&#9;null&#10;mongow&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/app/MongoWrapper.php&#10;git&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/.gitignore&#10;giti&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/.gitignore&#10;gitig&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/.gitignore&#10;ignore&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/.gitignore&#10;web.php&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/routes/web.php&#10;web&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/routes/web.php&#10;data&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/vendor/mongodb/mongodb/src/Database.php&#10;kerne&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/app/Http/Kernel.php&#10;Faker&#9;null&#9;null&#10;usercon&#9;null&#9;null&#10;composer&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/composer.json&#10;app&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/routes/api.php&#10;databa&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/config/database.php&#10;servicepro&#9;null&#9;null&#10;routecolle&#9;null&#9;null&#10;database.php&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/config/database.php&#10;app.php&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/config/app.php" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files (x86)\nodejs\node.exe" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="nodejs_interpreter_path" value="C:/Program Files (x86)/nodejs/node" />
@@ -316,11 +395,15 @@
       <workItem from="1476524971627" duration="9468000" />
       <workItem from="1476647692380" duration="34000" />
       <workItem from="1476647734999" duration="5678000" />
+      <workItem from="1476660883510" duration="734000" />
+      <workItem from="1476727629787" duration="5000" />
+      <workItem from="1476727643206" duration="6873000" />
+      <workItem from="1477229799255" duration="59000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168444000" />
+    <option name="totallyTimeSpent" value="176115000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -333,15 +416,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20042644" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14872068" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4787472" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32997763" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32997763" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20309168" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31543624" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21923937" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32997763" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -712,32 +795,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/blog/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
+        <state relative-caret-position="476">
           <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/app/Http/Controllers/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding>
-            <element signature="e#7#386#0#PHP" expanded="true" />
-            <element signature="e#404#447#1#PHP" expanded="false" />
+            <element signature="e#40#61#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/blog/app/MongoWrapper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="70" column="66" selection-start-line="70" selection-start-column="66" selection-end-line="70" selection-end-column="66" />
-          <folding>
-            <element signature="e#9071#10256#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/app/Http/Controllers/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-          <folding>
-            <marker date="1476650839885" expanded="true" signature="2423:2429" ph="{...}" />
-          </folding>
+        <state relative-caret-position="489">
+          <caret line="157" column="96" selection-start-line="157" selection-start-column="96" selection-end-line="157" selection-end-column="96" />
+          <folding />
         </state>
       </provider>
     </entry>
