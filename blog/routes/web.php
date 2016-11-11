@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//REST API routes
+//REST API routes`
 
 //users
 //Route::get('/users/{username}/friends','UserController@userGetFriends');

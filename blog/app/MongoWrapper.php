@@ -8,6 +8,7 @@
 
 namespace App;
 
+use Illuminate\Auth\Access\Response;
 use \MongoDB\Client as Client;
 use Faker;
 use Psy\Util\Json;
@@ -214,6 +215,7 @@ class MongoWrapper
             $user = array(
                 "_id" => $username,
                 "password" => $faker->password(),
+                "guide" => $faker->boolean(),
                 "online" => $faker->boolean(),
                 "latitude" => 42+$latRandom/1000000,
                 "longitude" => 21+$longRandom/1000000,
