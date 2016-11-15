@@ -374,13 +374,32 @@ class Mailable implements MailableContract
 
         if ($address instanceof Collection || is_array($address)) {
             foreach ($address as $user) {
-                $this->{$property}($user->email, $user->name);
+                $user = $this->parseUser($user);
+
+                $this->{$property}($user->email, isset($user->name) ? $user->name : null);
             }
         } else {
             $this->{$property}[] = compact('address', 'name');
         }
 
         return $this;
+    }
+
+    /**
+     * Parse the given user into an object.
+     *
+     * @param  mixed  $user
+     * @return object
+     */
+    protected function parseUser($user)
+    {
+        if (is_array($user)) {
+            return (object) $user;
+        } elseif (is_string($user)) {
+            return (object) ['email' => $user];
+        }
+
+        return $user;
     }
 
     /**
@@ -484,6 +503,46 @@ class Mailable implements MailableContract
         $this->callbacks[] = $callback;
 
         return $this;
+    }
+
+    /**
+     * Get the sender of the message.
+     *
+     * @return array
+     */
+    public function getFrom()
+    {
+        return $this->from;
+    }
+
+    /**
+     * Get the "to" recipients of the message.
+     *
+     * @return array
+     */
+    public function getTo()
+    {
+        return $this->to;
+    }
+
+    /**
+     * Get the "bcc" recipients of the message.
+     *
+     * @return array
+     */
+    public function getBcc()
+    {
+        return $this->bcc;
+    }
+
+    /**
+     * Get the "cc" recipients of the message.
+     *
+     * @return array
+     */
+    public function getCc()
+    {
+        return $this->cc;
     }
 
     /**

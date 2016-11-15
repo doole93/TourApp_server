@@ -59,6 +59,14 @@ class MailChannel
                 $m->to($recipients);
             }
 
+            if ($message->cc) {
+                $m->cc($message->cc);
+            }
+
+            if (! empty($message->replyTo)) {
+                $m->replyTo($message->replyTo[0], isset($message->replyTo[1]) ? $message->replyTo[1] : null);
+            }
+
             $m->subject($message->subject ?: Str::title(
                 Str::snake(class_basename($notification), ' ')
             ));
@@ -69,6 +77,10 @@ class MailChannel
 
             foreach ($message->rawAttachments as $attachment) {
                 $m->attachData($attachment['data'], $attachment['name'], $attachment['options']);
+            }
+
+            if (! is_null($message->priority)) {
+                $m->setPriority($message->priority);
             }
         });
     }

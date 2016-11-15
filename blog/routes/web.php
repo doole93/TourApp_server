@@ -25,6 +25,7 @@ Route::post('/users','UserController@usersAdd');
 Route::put('/users','UserController@userUpdate');
 Route::get('/users/online','UserController@userGetOnlineUsers');
 Route::get('/users/{username}','UserController@userGet');
+Route::post('/friendsNear','UserController@friendsNear');
 Route::post('/usersNear','UserController@usersNear');
 Route::post('/users/validate','UserController@userValidate');
 Route::post('/users/addFriend','UserController@userAddFriend');
@@ -49,6 +50,10 @@ Route::get('/cleanData','UserController@cleanData');
 
 //funf data
 Route::get('/generateProbes','UserController@generateProbesCollections');
+
+//push notification
+Route::post('/users/sendNotification','UserController@sendNotification');
+
 
 
 

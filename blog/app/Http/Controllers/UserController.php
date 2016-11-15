@@ -17,7 +17,7 @@ class UserController extends Controller
 
     public function usersNear()
     {
-        return MongoWrapper::usersNear(request()->all(),request('radius'));
+        return MongoWrapper::friendsNear(request()->all(),request('radius'));
     }
 
     public function userGet($username)
@@ -119,5 +119,10 @@ class UserController extends Controller
         return MongoWrapper::generateProbesCollections();
     }
 
-
+    public function sendNotification()
+    {
+//        dump(request()->all());die();
+        return MongoWrapper::sendNotification(request()->request->get('fromUserUsername'),
+            request()->get('toUserUsername'));
+    }
 }

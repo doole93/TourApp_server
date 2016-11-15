@@ -8,10 +8,10 @@
 
 namespace App;
 
-use Illuminate\Auth\Access\Response;
+use Davibennun\LaravelPushNotification\Facades\PushNotification;
+use League\Flysystem\Exception;
 use \MongoDB\Client as Client;
 use Faker;
-use Psy\Util\Json;
 
 class MongoWrapper
 {
@@ -57,7 +57,7 @@ class MongoWrapper
     }
 
     //TODO: testirati ovu fju dal radi
-    public static function usersNear($user,$radius)
+    public static function usersNear($user, $radius)
     {
         $db=self::getInstance();
         $onlineUsers = self::bsonIterator2Array($db->selectCollection(self::$usersCollection)
@@ -68,6 +68,30 @@ class MongoWrapper
         $onlineUserIDs = array_map(
                         function($friend) {return $friend['_id'];},
                         $onlineUsers );
+        $onlineUsers = array_combine($onlineUserIDs,$onlineUsers);
+        $friendsToCheck = array_intersect($usersFriendsIDs,$onlineUserIDs);
+        $near = array();
+        foreach ($friendsToCheck as $friendID) {
+            $distance = self::haversineGreatCircleDistance($user['latitude'],$user['longitude'],
+                $onlineUsers[$friendID]['latitude'],$onlineUsers[$friendID]['longitude']);
+            if ($distance<$radius) {
+                $near[]=$onlineUsers[$friendID];
+            }
+        }
+        return response($near)->header('Content-Type','application/json');
+    }
+
+    public static function friendsNear($user, $radius)
+    {
+        $db=self::getInstance();
+        $onlineUsers = self::bsonIterator2Array($db->selectCollection(self::$usersCollection)
+            ->find(array('online' => true)));
+        $usersFriendsIDs = array_map(
+            function($friend) {return $friend['_id'];},
+            $user['friends']);
+        $onlineUserIDs = array_map(
+            function($friend) {return $friend['_id'];},
+            $onlineUsers );
         $onlineUsers = array_combine($onlineUserIDs,$onlineUsers);
         $friendsToCheck = array_intersect($usersFriendsIDs,$onlineUserIDs);
         $near = array();
@@ -229,7 +253,8 @@ class MongoWrapper
                 'cities' => array(),
                 'upvotes' => $upvotes,
                 'downvotes' => $downvotes,
-                'percentage' => number_format($upvotes *100/($upvotes+$downvotes),2)
+                'percentage' => number_format($upvotes *100/($upvotes+$downvotes),2),
+                'tokenFB' => ''
             );
             $addedUsers[] = $username;
             $addedUsersObjects[$username] = $user;
@@ -369,5 +394,21 @@ class MongoWrapper
         $angle = 2 * asin(sqrt(pow(sin($latDelta / 2), 2) +
                 cos($latFrom) * cos($latTo) * pow(sin($lonDelta / 2), 2)));
         return ($angle * $earthRadius)/1000000;
+    }
+
+    public static function sendNotification($fromUserUsername, $toUserUsername)
+    {
+        try{
+            $db=self::getInstance();
+            $toUser = $db->selectCollection(self::$usersCollection)->findOne(array('_id' => $toUserUsername));
+//            dump($toUser['tokenFB']);dump($fromUserUsername);die();
+            $message = PushNotification::Message('poruka', array('poruka' => $fromUserUsername . " wants to be your friend :)"));
+            PushNotification::app('TourApp')
+                ->to($toUser['tokenFB'])
+                ->send($message);
+        } catch (Exception $e) {
+            return response($e->getMessage())->header('Content-Type', 'application/json');
+        }
+        return response('true')->header('Content-Type', 'application/json');
     }
 }
