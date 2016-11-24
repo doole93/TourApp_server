@@ -2,23 +2,139 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f621654f-9681-4229-bbe3-d2c7b0ccb13a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/journal/WiredTigerLog.0000000008" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/db/data/journal/WiredTigerLog.0000000018" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/examples/bootstrap.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/examples/bulkwrite.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/examples/write.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/paragonie/random_compat/CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/paragonie/random_compat/ERRATA.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/paragonie/random_compat/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/paragonie/random_compat/SECURITY.md" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/WiredTiger.wt" afterPath="$PROJECT_DIR$/blog/db/data/WiredTiger.wt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/collection-0-8876410872205362562.wt" afterPath="$PROJECT_DIR$/blog/db/data/collection-0-8876410872205362562.wt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/collection-4-8876410872205362562.wt" afterPath="$PROJECT_DIR$/blog/db/data/collection-4-8876410872205362562.wt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/collection-6-8876410872205362562.wt" afterPath="$PROJECT_DIR$/blog/db/data/collection-6-8876410872205362562.wt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/collection-8-8876410872205362562.wt" afterPath="$PROJECT_DIR$/blog/db/data/collection-8-8876410872205362562.wt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/index-1-8876410872205362562.wt" afterPath="$PROJECT_DIR$/blog/db/data/index-1-8876410872205362562.wt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/index-5-8876410872205362562.wt" afterPath="$PROJECT_DIR$/blog/db/data/index-5-8876410872205362562.wt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/index-7-8876410872205362562.wt" afterPath="$PROJECT_DIR$/blog/db/data/index-7-8876410872205362562.wt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/index-9-8876410872205362562.wt" afterPath="$PROJECT_DIR$/blog/db/data/index-9-8876410872205362562.wt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/mongod.lock" afterPath="$PROJECT_DIR$/blog/db/data/mongod.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/sizeStorer.wt" afterPath="$PROJECT_DIR$/blog/db/data/sizeStorer.wt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/app/Http/Controllers/UserController.php" afterPath="$PROJECT_DIR$/blog/app/Http/Controllers/UserController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/app/MongoWrapper.php" afterPath="$PROJECT_DIR$/blog/app/MongoWrapper.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/db/data/WiredTiger.turtle" afterPath="$PROJECT_DIR$/blog/db/data/WiredTiger.turtle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/resources/views/welcome.blade.php" afterPath="$PROJECT_DIR$/blog/resources/views/welcome.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/routes/web.php" afterPath="$PROJECT_DIR$/blog/routes/web.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/container/Container.php" afterPath="$PROJECT_DIR$/vendor/illuminate/container/Container.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/contracts/Cookie/QueueingFactory.php" afterPath="$PROJECT_DIR$/vendor/illuminate/contracts/Cookie/QueueingFactory.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/contracts/Foundation/Application.php" afterPath="$PROJECT_DIR$/vendor/illuminate/contracts/Foundation/Application.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/contracts/Notifications/Factory.php" afterPath="$PROJECT_DIR$/vendor/illuminate/contracts/Notifications/Factory.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/contracts/Pagination/Paginator.php" afterPath="$PROJECT_DIR$/vendor/illuminate/contracts/Pagination/Paginator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/contracts/Routing/Registrar.php" afterPath="$PROJECT_DIR$/vendor/illuminate/contracts/Routing/Registrar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/contracts/Routing/UrlGenerator.php" afterPath="$PROJECT_DIR$/vendor/illuminate/contracts/Routing/UrlGenerator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/database/Connection.php" afterPath="$PROJECT_DIR$/vendor/illuminate/database/Connection.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/database/Connectors/ConnectionFactory.php" afterPath="$PROJECT_DIR$/vendor/illuminate/database/Connectors/ConnectionFactory.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/database/Connectors/Connector.php" afterPath="$PROJECT_DIR$/vendor/illuminate/database/Connectors/Connector.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/database/Connectors/PostgresConnector.php" afterPath="$PROJECT_DIR$/vendor/illuminate/database/Connectors/PostgresConnector.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/database/Console/Migrations/RefreshCommand.php" afterPath="$PROJECT_DIR$/vendor/illuminate/database/Console/Migrations/RefreshCommand.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/database/Console/Migrations/ResetCommand.php" afterPath="$PROJECT_DIR$/vendor/illuminate/database/Console/Migrations/ResetCommand.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/database/Console/Migrations/RollbackCommand.php" afterPath="$PROJECT_DIR$/vendor/illuminate/database/Console/Migrations/RollbackCommand.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/database/Console/Migrations/StatusCommand.php" afterPath="$PROJECT_DIR$/vendor/illuminate/database/Console/Migrations/StatusCommand.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/database/Eloquent/Builder.php" afterPath="$PROJECT_DIR$/vendor/illuminate/database/Eloquent/Builder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/database/Eloquent/Collection.php" afterPath="$PROJECT_DIR$/vendor/illuminate/database/Eloquent/Collection.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/database/Eloquent/Factory.php" afterPath="$PROJECT_DIR$/vendor/illuminate/database/Eloquent/Factory.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/database/Eloquent/FactoryBuilder.php" afterPath="$PROJECT_DIR$/vendor/illuminate/database/Eloquent/FactoryBuilder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/database/Eloquent/Model.php" afterPath="$PROJECT_DIR$/vendor/illuminate/database/Eloquent/Model.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/database/Eloquent/ModelNotFoundException.php" afterPath="$PROJECT_DIR$/vendor/illuminate/database/Eloquent/ModelNotFoundException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/database/Eloquent/Relations/BelongsTo.php" afterPath="$PROJECT_DIR$/vendor/illuminate/database/Eloquent/Relations/BelongsTo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/database/Eloquent/Relations/BelongsToMany.php" afterPath="$PROJECT_DIR$/vendor/illuminate/database/Eloquent/Relations/BelongsToMany.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/database/Eloquent/Relations/HasManyThrough.php" afterPath="$PROJECT_DIR$/vendor/illuminate/database/Eloquent/Relations/HasManyThrough.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/database/Eloquent/Relations/HasOne.php" afterPath="$PROJECT_DIR$/vendor/illuminate/database/Eloquent/Relations/HasOne.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/database/Eloquent/Relations/Relation.php" afterPath="$PROJECT_DIR$/vendor/illuminate/database/Eloquent/Relations/Relation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/database/Eloquent/SoftDeletes.php" afterPath="$PROJECT_DIR$/vendor/illuminate/database/Eloquent/SoftDeletes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/database/Eloquent/SoftDeletingScope.php" afterPath="$PROJECT_DIR$/vendor/illuminate/database/Eloquent/SoftDeletingScope.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/database/Events/QueryExecuted.php" afterPath="$PROJECT_DIR$/vendor/illuminate/database/Events/QueryExecuted.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/database/Migrations/DatabaseMigrationRepository.php" afterPath="$PROJECT_DIR$/vendor/illuminate/database/Migrations/DatabaseMigrationRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/database/Migrations/Migrator.php" afterPath="$PROJECT_DIR$/vendor/illuminate/database/Migrations/Migrator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/database/Migrations/stubs/create.stub" afterPath="$PROJECT_DIR$/vendor/illuminate/database/Migrations/stubs/create.stub" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/database/MySqlConnection.php" afterPath="$PROJECT_DIR$/vendor/illuminate/database/MySqlConnection.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/database/Query/Builder.php" afterPath="$PROJECT_DIR$/vendor/illuminate/database/Query/Builder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/database/Query/Grammars/Grammar.php" afterPath="$PROJECT_DIR$/vendor/illuminate/database/Query/Grammars/Grammar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/database/Query/Grammars/MySqlGrammar.php" afterPath="$PROJECT_DIR$/vendor/illuminate/database/Query/Grammars/MySqlGrammar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/database/Query/Grammars/PostgresGrammar.php" afterPath="$PROJECT_DIR$/vendor/illuminate/database/Query/Grammars/PostgresGrammar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/database/Query/Grammars/SqlServerGrammar.php" afterPath="$PROJECT_DIR$/vendor/illuminate/database/Query/Grammars/SqlServerGrammar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/database/Schema/Blueprint.php" afterPath="$PROJECT_DIR$/vendor/illuminate/database/Schema/Blueprint.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/database/Schema/Builder.php" afterPath="$PROJECT_DIR$/vendor/illuminate/database/Schema/Builder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/database/Schema/Grammars/Grammar.php" afterPath="$PROJECT_DIR$/vendor/illuminate/database/Schema/Grammars/Grammar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/database/Schema/Grammars/MySqlGrammar.php" afterPath="$PROJECT_DIR$/vendor/illuminate/database/Schema/Grammars/MySqlGrammar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/database/Schema/Grammars/PostgresGrammar.php" afterPath="$PROJECT_DIR$/vendor/illuminate/database/Schema/Grammars/PostgresGrammar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/database/Schema/Grammars/SqlServerGrammar.php" afterPath="$PROJECT_DIR$/vendor/illuminate/database/Schema/Grammars/SqlServerGrammar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/database/Schema/PostgresBuilder.php" afterPath="$PROJECT_DIR$/vendor/illuminate/database/Schema/PostgresBuilder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/database/SeedServiceProvider.php" afterPath="$PROJECT_DIR$/vendor/illuminate/database/SeedServiceProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/support/Arr.php" afterPath="$PROJECT_DIR$/vendor/illuminate/support/Arr.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/support/Collection.php" afterPath="$PROJECT_DIR$/vendor/illuminate/support/Collection.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/support/Facades/Bus.php" afterPath="$PROJECT_DIR$/vendor/illuminate/support/Facades/Bus.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/support/Facades/Event.php" afterPath="$PROJECT_DIR$/vendor/illuminate/support/Facades/Event.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/support/Facades/Facade.php" afterPath="$PROJECT_DIR$/vendor/illuminate/support/Facades/Facade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/support/Facades/Mail.php" afterPath="$PROJECT_DIR$/vendor/illuminate/support/Facades/Mail.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/support/Facades/Notification.php" afterPath="$PROJECT_DIR$/vendor/illuminate/support/Facades/Notification.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/support/Facades/Queue.php" afterPath="$PROJECT_DIR$/vendor/illuminate/support/Facades/Queue.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/support/HtmlString.php" afterPath="$PROJECT_DIR$/vendor/illuminate/support/HtmlString.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/support/Pluralizer.php" afterPath="$PROJECT_DIR$/vendor/illuminate/support/Pluralizer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/support/ServiceProvider.php" afterPath="$PROJECT_DIR$/vendor/illuminate/support/ServiceProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/support/Str.php" afterPath="$PROJECT_DIR$/vendor/illuminate/support/Str.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/support/ViewErrorBag.php" afterPath="$PROJECT_DIR$/vendor/illuminate/support/ViewErrorBag.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/illuminate/support/helpers.php" afterPath="$PROJECT_DIR$/vendor/illuminate/support/helpers.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/jenssegers/mongodb/README.md" afterPath="$PROJECT_DIR$/vendor/jenssegers/mongodb/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/jenssegers/mongodb/src/Jenssegers/Mongodb/Auth/DatabaseTokenRepository.php" afterPath="$PROJECT_DIR$/vendor/jenssegers/mongodb/src/Jenssegers/Mongodb/Auth/DatabaseTokenRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/jenssegers/mongodb/src/Jenssegers/Mongodb/Collection.php" afterPath="$PROJECT_DIR$/vendor/jenssegers/mongodb/src/Jenssegers/Mongodb/Collection.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/jenssegers/mongodb/src/Jenssegers/Mongodb/Connection.php" afterPath="$PROJECT_DIR$/vendor/jenssegers/mongodb/src/Jenssegers/Mongodb/Connection.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/jenssegers/mongodb/src/Jenssegers/Mongodb/Eloquent/Builder.php" afterPath="$PROJECT_DIR$/vendor/jenssegers/mongodb/src/Jenssegers/Mongodb/Eloquent/Builder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/jenssegers/mongodb/src/Jenssegers/Mongodb/Eloquent/Model.php" afterPath="$PROJECT_DIR$/vendor/jenssegers/mongodb/src/Jenssegers/Mongodb/Eloquent/Model.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/jenssegers/mongodb/src/Jenssegers/Mongodb/Eloquent/SoftDeletes.php" afterPath="$PROJECT_DIR$/vendor/jenssegers/mongodb/src/Jenssegers/Mongodb/Eloquent/SoftDeletes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/jenssegers/mongodb/src/Jenssegers/Mongodb/Query/Builder.php" afterPath="$PROJECT_DIR$/vendor/jenssegers/mongodb/src/Jenssegers/Mongodb/Query/Builder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/jenssegers/mongodb/src/Jenssegers/Mongodb/Queue/MongoQueue.php" afterPath="$PROJECT_DIR$/vendor/jenssegers/mongodb/src/Jenssegers/Mongodb/Queue/MongoQueue.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/jenssegers/mongodb/src/Jenssegers/Mongodb/Relations/BelongsToMany.php" afterPath="$PROJECT_DIR$/vendor/jenssegers/mongodb/src/Jenssegers/Mongodb/Relations/BelongsToMany.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/jenssegers/mongodb/src/Jenssegers/Mongodb/Relations/MorphTo.php" afterPath="$PROJECT_DIR$/vendor/jenssegers/mongodb/src/Jenssegers/Mongodb/Relations/MorphTo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/jenssegers/mongodb/src/Jenssegers/Mongodb/Schema/Blueprint.php" afterPath="$PROJECT_DIR$/vendor/jenssegers/mongodb/src/Jenssegers/Mongodb/Schema/Blueprint.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/.travis.yml" afterPath="$PROJECT_DIR$/vendor/mongodb/mongodb/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/RELEASE-1.0" afterPath="$PROJECT_DIR$/vendor/mongodb/mongodb/RELEASE-1.0" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/tutorial/crud.md" afterPath="$PROJECT_DIR$/vendor/mongodb/mongodb/docs/tutorial/crud.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/BulkWriteResult.php" afterPath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/BulkWriteResult.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Client.php" afterPath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Client.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Collection.php" afterPath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Collection.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Database.php" afterPath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Database.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/InsertManyResult.php" afterPath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/InsertManyResult.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/InsertOneResult.php" afterPath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/InsertOneResult.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Model/CollectionInfo.php" afterPath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Model/CollectionInfo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Model/DatabaseInfo.php" afterPath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Model/DatabaseInfo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Model/IndexInfo.php" afterPath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Model/IndexInfo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Model/IndexInput.php" afterPath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Model/IndexInput.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Operation/CreateIndexes.php" afterPath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Operation/CreateIndexes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Operation/DatabaseCommand.php" afterPath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Operation/DatabaseCommand.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Operation/FindAndModify.php" afterPath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Operation/FindAndModify.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/UpdateResult.php" afterPath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/UpdateResult.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/functions.php" afterPath="$PROJECT_DIR$/vendor/mongodb/mongodb/src/functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/FunctionsTest.php" afterPath="$PROJECT_DIR$/vendor/mongodb/mongodb/tests/FunctionsTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/paragonie/random_compat/lib/byte_safe_strings.php" afterPath="$PROJECT_DIR$/vendor/paragonie/random_compat/lib/byte_safe_strings.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/paragonie/random_compat/lib/cast_to_int.php" afterPath="$PROJECT_DIR$/vendor/paragonie/random_compat/lib/cast_to_int.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/paragonie/random_compat/lib/error_polyfill.php" afterPath="$PROJECT_DIR$/vendor/paragonie/random_compat/lib/error_polyfill.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/paragonie/random_compat/lib/random.php" afterPath="$PROJECT_DIR$/vendor/paragonie/random_compat/lib/random.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/paragonie/random_compat/lib/random_bytes_com_dotnet.php" afterPath="$PROJECT_DIR$/vendor/paragonie/random_compat/lib/random_bytes_com_dotnet.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/paragonie/random_compat/lib/random_bytes_dev_urandom.php" afterPath="$PROJECT_DIR$/vendor/paragonie/random_compat/lib/random_bytes_dev_urandom.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/paragonie/random_compat/lib/random_bytes_libsodium.php" afterPath="$PROJECT_DIR$/vendor/paragonie/random_compat/lib/random_bytes_libsodium.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/paragonie/random_compat/lib/random_bytes_libsodium_legacy.php" afterPath="$PROJECT_DIR$/vendor/paragonie/random_compat/lib/random_bytes_libsodium_legacy.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/paragonie/random_compat/lib/random_bytes_mcrypt.php" afterPath="$PROJECT_DIR$/vendor/paragonie/random_compat/lib/random_bytes_mcrypt.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/paragonie/random_compat/lib/random_int.php" afterPath="$PROJECT_DIR$/vendor/paragonie/random_compat/lib/random_int.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/Mbstring.php" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/Mbstring.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/bootstrap.php" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/bootstrap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/composer.json" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Dumper/MoFileDumper.php" afterPath="$PROJECT_DIR$/vendor/symfony/translation/Dumper/MoFileDumper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Loader/MoFileLoader.php" afterPath="$PROJECT_DIR$/vendor/symfony/translation/Loader/MoFileLoader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Tests/Dumper/FileDumperTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/translation/Tests/Dumper/FileDumperTest.php" />
     </list>
     <ignored path="laravel_test.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,11 +155,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="push-notification.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog/config/push-notification.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blog/app/Http/Controllers/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1377">
-              <caret line="82" column="53" selection-start-line="82" selection-start-column="53" selection-end-line="82" selection-end-column="53" />
+            <state relative-caret-position="269">
+              <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -52,10 +178,10 @@
       <file leaf-file-name="MongoWrapper.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blog/app/MongoWrapper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="215" column="35" selection-start-line="215" selection-start-column="35" selection-end-line="215" selection-end-column="35" />
+            <state relative-caret-position="974">
+              <caret line="392" column="72" selection-start-line="392" selection-start-column="72" selection-end-line="392" selection-end-column="72" />
               <folding>
-                <element signature="e#9242#10427#0#PHP" expanded="false" />
+                <element signature="e#103#167#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -64,8 +190,8 @@
       <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blog/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="28" column="58" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="58" />
+            <state relative-caret-position="371">
+              <caret line="34" column="10" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -86,18 +212,19 @@
       <list>
         <option value="$PROJECT_DIR$/blog/config/database.php" />
         <option value="$PROJECT_DIR$/blog/routes/api.php" />
-        <option value="$PROJECT_DIR$/blog/composer.json" />
-        <option value="$PROJECT_DIR$/blog/config/app.php" />
         <option value="$PROJECT_DIR$/blog/app/Http/Kernel.php" />
         <option value="$PROJECT_DIR$/vendor/mongodb/mongodb/src/Database.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/blog/app/User.php" />
         <option value="$PROJECT_DIR$/blog/.gitignore" />
-        <option value="$PROJECT_DIR$/blog/app/Http/Controllers/UserController.php" />
         <option value="$PROJECT_DIR$/blog/phpunit.xml" />
         <option value="$PROJECT_DIR$/blog/resources/views/welcome.blade.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/blog/composer.json" />
         <option value="$PROJECT_DIR$/blog/routes/web.php" />
+        <option value="$PROJECT_DIR$/blog/config/app.php" />
+        <option value="$PROJECT_DIR$/blog/config/push-notification.php" />
+        <option value="$PROJECT_DIR$/blog/app/Http/Controllers/UserController.php" />
         <option value="$PROJECT_DIR$/blog/app/MongoWrapper.php" />
       </list>
     </option>
@@ -141,6 +268,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -187,13 +315,30 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="routes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel_test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel_test" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -201,7 +346,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="mongow&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/app/MongoWrapper.php&#10;mongowra&#9;null&#9;null&#10;mongowrapp&#9;null&#9;null&#10;git&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/.gitignore&#10;giti&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/.gitignore&#10;gitig&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/.gitignore&#10;ignore&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/.gitignore&#10;web.php&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/routes/web.php&#10;web&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/routes/web.php&#10;data&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/vendor/mongodb/mongodb/src/Database.php&#10;kerne&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/app/Http/Kernel.php&#10;Faker&#9;null&#9;null&#10;usercon&#9;null&#9;null&#10;composer&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/composer.json&#10;app&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/routes/api.php&#10;databa&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/config/database.php&#10;servicepro&#9;null&#9;null&#10;routecolle&#9;null&#9;null&#10;database.php&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/config/database.php&#10;app.php&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/config/app.php" />
+    <property name="SearchEverywhereHistoryKey" value="push&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/config/push-notification.php&#10;app.php&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/config/app.php&#10;app&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/config/app.php&#10;push-noti&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/config/push-notification.php&#10;app.&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/config/app.php&#10;compo&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/composer.json&#10;mongow&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/app/MongoWrapper.php&#10;mongowra&#9;null&#9;null&#10;mongowrapp&#9;null&#9;null&#10;git&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/.gitignore&#10;giti&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/.gitignore&#10;gitig&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/.gitignore&#10;ignore&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/.gitignore&#10;web.php&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/routes/web.php&#10;web&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/routes/web.php&#10;data&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/vendor/mongodb/mongodb/src/Database.php&#10;kerne&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/app/Http/Kernel.php&#10;Faker&#9;null&#9;null&#10;usercon&#9;null&#9;null&#10;composer&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/composer.json&#10;databa&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/config/database.php&#10;servicepro&#9;null&#9;null&#10;routecolle&#9;null&#9;null&#10;database.php&#9;FILE&#9;file://C:/wamp64/www/composer/laravel_test/blog/config/database.php" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files (x86)\nodejs\node.exe" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="nodejs_interpreter_path" value="C:/Program Files (x86)/nodejs/node" />
@@ -332,12 +477,21 @@
       <workItem from="1478373142217" duration="942000" />
       <workItem from="1478450890319" duration="2609000" />
       <workItem from="1478729391080" duration="12000" />
-      <workItem from="1478884196709" duration="899000" />
+      <workItem from="1478884196709" duration="3669000" />
+      <workItem from="1479160570696" duration="3426000" />
+      <workItem from="1479243582759" duration="8021000" />
+      <workItem from="1479335495880" duration="4462000" />
+      <workItem from="1479384708068" duration="961000" />
+      <workItem from="1479395905888" duration="2492000" />
+      <workItem from="1479498332139" duration="3334000" />
+      <workItem from="1479586566172" duration="605000" />
+      <workItem from="1479652681169" duration="1258000" />
+      <workItem from="1479947407061" duration="2242000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185800000" />
+    <option name="totallyTimeSpent" value="215371000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -352,18 +506,19 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16577825" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21268657" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4787472" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32997763" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26510066" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32997763" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20309168" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40715882" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18550107" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2606264" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32997763" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="92" y="92" width="1736" height="856" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -395,41 +550,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/blog/app/Providers/BroadcastServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/app/Providers/AuthServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/app/Providers/AppServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/bootstrap/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/bootstrap/autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blog/config/services.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -577,24 +697,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blog/artisan">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -721,35 +827,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog/config/app.php">
+    <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="195" column="0" selection-start-line="195" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
+        <state relative-caret-position="68">
+          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog/routes/web.php">
+    <entry file="file://$PROJECT_DIR$/blog/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="28" column="58" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="58" />
+        <state relative-caret-position="204">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/davibennun/laravel-push-notification/src/Davibennun/LaravelPushNotification/App.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/vendor/davibennun/laravel-push-notification/src/Davibennun/LaravelPushNotification/App.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="38" column="29" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/davibennun/laravel-push-notification/src/Davibennun/LaravelPushNotification/Facades/PushNotification.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/vendor/davibennun/laravel-push-notification/src/Davibennun/LaravelPushNotification/Facades/PushNotification.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="223" column="38" selection-start-line="223" selection-start-column="38" selection-end-line="223" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/config/push-notification.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/blog/app/Http/Controllers/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1377">
-          <caret line="82" column="53" selection-start-line="82" selection-start-column="53" selection-end-line="82" selection-end-column="53" />
+        <state relative-caret-position="269">
+          <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="34" column="10" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/blog/app/MongoWrapper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="215" column="35" selection-start-line="215" selection-start-column="35" selection-end-line="215" selection-end-column="35" />
+        <state relative-caret-position="974">
+          <caret line="392" column="72" selection-start-line="392" selection-start-column="72" selection-end-line="392" selection-end-column="72" />
           <folding>
-            <element signature="e#9242#10427#0#PHP" expanded="false" />
+            <element signature="e#103#167#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

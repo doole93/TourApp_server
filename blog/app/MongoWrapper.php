@@ -59,25 +59,23 @@ class MongoWrapper
     //TODO: testirati ovu fju dal radi
     public static function usersNear($user, $radius)
     {
+//        dump($user);dump($radius);die();
         $db=self::getInstance();
         $onlineUsers = self::bsonIterator2Array($db->selectCollection(self::$usersCollection)
                         ->find(array('online' => true)));
-        $usersFriendsIDs = array_map(
-                      function($friend) {return $friend['_id'];},
-                     $user['friends']);
-        $onlineUserIDs = array_map(
-                        function($friend) {return $friend['_id'];},
-                        $onlineUsers );
-        $onlineUsers = array_combine($onlineUserIDs,$onlineUsers);
-        $friendsToCheck = array_intersect($usersFriendsIDs,$onlineUserIDs);
-        $near = array();
-        foreach ($friendsToCheck as $friendID) {
-            $distance = self::haversineGreatCircleDistance($user['latitude'],$user['longitude'],
-                $onlineUsers[$friendID]['latitude'],$onlineUsers[$friendID]['longitude']);
-            if ($distance<$radius) {
-                $near[]=$onlineUsers[$friendID];
+//        dump($onlineUsers);die();
+        foreach ($onlineUsers as $onlineUser) {
+//            dump($onlineUser);die();
+            if($onlineUser['_id'] != $user['_id']) {
+                $distance = self::haversineGreatCircleDistance($user['latitude'],$user['longitude'],
+                    $onlineUser['latitude'],$onlineUser['longitude']);
+//            dump($distance);die();
+                if ($distance<$radius) {
+                    $near[]=$onlineUser;
+                }
             }
         }
+        dump($near);die();
         return response($near)->header('Content-Type','application/json');
     }
 
@@ -365,44 +363,47 @@ class MongoWrapper
     }
 
     //Haversine formula for distance between two points - km???
-//    private static function getDistanceM($latitude1, $longitude1, $latitude2, $longitude2)
-//    {
-//        $earth_radius = 6371;
-//        $dLat = deg2rad($latitude2 - $latitude1);
-//        $dLon = deg2rad($longitude2 - $longitude1);
-//        $a = sin($dLat/2) * sin($dLat/2) + cos(deg2rad($latitude1)) * cos(deg2rad($latitude2))
-//            * sin($dLon/2) * sin($dLon/2);
-//        $c = 2 * asin(sqrt($a));
-//        $d = $earth_radius * $c;
+    private static function haversineGreatCircleDistance($latitude1, $longitude1, $latitude2, $longitude2)
+    {
+        $earth_radius = 6371;
+        $dLat = deg2rad($latitude2 - $latitude1);
+        $dLon = deg2rad($longitude2 - $longitude1);
+        $a = sin($dLat/2) * sin($dLat/2) + cos(deg2rad($latitude1)) * cos(deg2rad($latitude2))
+            * sin($dLon/2) * sin($dLon/2);
+        $c = 2 * asin(sqrt($a));
+        $d = $earth_radius * $c;
 //        $d =  $d * 1000; //u metrima
 //        $d = (int) $d;
-//        return $d;
-//    }
-
-    public static function haversineGreatCircleDistance(
-        $latitudeFrom, $longitudeFrom, $latitudeTo, $longitudeTo, $earthRadius = 6371000)
-    {
-        // convert from degrees to radians
-        $latFrom = deg2rad($latitudeFrom);
-        $lonFrom = deg2rad($longitudeFrom);
-        $latTo = deg2rad($latitudeTo);
-        $lonTo = deg2rad($longitudeTo);
-
-        $latDelta = $latTo - $latFrom;
-        $lonDelta = $lonTo - $lonFrom;
-
-        $angle = 2 * asin(sqrt(pow(sin($latDelta / 2), 2) +
-                cos($latFrom) * cos($latTo) * pow(sin($lonDelta / 2), 2)));
-        return ($angle * $earthRadius)/1000000;
+        return $d;
     }
 
-    public static function sendNotification($fromUserUsername, $toUserUsername)
+//    public static function haversineGreatCircleDistance(
+//        $latitudeFrom, $longitudeFrom, $latitudeTo, $longitudeTo, $earthRadius = 6371000)
+//    {
+//        // convert from degrees to radians
+//        $latFrom = deg2rad($latitudeFrom);
+//        $lonFrom = deg2rad($longitudeFrom);
+//        $latTo = deg2rad($latitudeTo);
+//        $lonTo = deg2rad($longitudeTo);
+//
+//        $latDelta = $latTo - $latFrom;
+//        $lonDelta = $lonTo - $lonFrom;
+//
+//        $angle = 2 * asin(sqrt(pow(sin($latDelta / 2), 2) +
+//                cos($latFrom) * cos($latTo) * pow(sin($lonDelta / 2), 2)));
+//        return ($angle * $earthRadius)/1000000;
+//    }
+
+    public static function sendNotification($fromUserUsername, $toUserUsername, $bluetoothAdresa)
     {
         try{
             $db=self::getInstance();
             $toUser = $db->selectCollection(self::$usersCollection)->findOne(array('_id' => $toUserUsername));
-//            dump($toUser['tokenFB']);dump($fromUserUsername);die();
-            $message = PushNotification::Message('poruka', array('poruka' => $fromUserUsername . " wants to be your friend :)"));
+            $message = PushNotification::Message('poruka', array(
+                'poruka' => $fromUserUsername . " wants to be your friend :)",
+                'fromUserUsername' => $fromUserUsername,
+                'bluetoothAdresa' => $bluetoothAdresa
+            ));
             PushNotification::app('TourApp')
                 ->to($toUser['tokenFB'])
                 ->send($message);

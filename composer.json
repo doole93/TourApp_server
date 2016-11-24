@@ -1,6 +1,7 @@
 {
     "require": {
         "jenssegers/mongodb": "^3.0",
-        "fzaninotto/faker": "^1.6"
+        "fzaninotto/faker": "^1.6",
+        "guzzlehttp/guzzle": "~6.0",
     }
 }
